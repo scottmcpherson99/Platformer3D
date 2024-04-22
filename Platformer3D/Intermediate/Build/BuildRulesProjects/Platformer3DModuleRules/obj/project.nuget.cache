@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "3itx4l6rAoMt5qgQlaSglG+cH1mjxANOYg5vj0INRrigC/+DrAvJQE2OENwbSHfl7NIYE3HSlFsos1V1/wIAcQ==",
+  "dgSpecHash": "tp0CbuwhPh5ez9kiVQH9PGcfcmsCMXT0wSUmL4QW1TTIlkbqGwTe0rAfRg0wVihfmH2ppoQlJPUj4IX+SwO+fQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\helen.KEELWORKS\\Documents\\Unreal Projects\\Platformer3D\\Intermediate\\Build\\BuildRulesProjects\\Platformer3DModuleRules\\Platformer3DModuleRules.csproj",
+  "projectFilePath": "C:\\Users\\helen.KEELWORKS\\Documents\\GitHub\\Platformer3D\\Platformer3D\\Intermediate\\Build\\BuildRulesProjects\\Platformer3DModuleRules\\Platformer3DModuleRules.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\helen.KEELWORKS\\.nuget\\packages\\blake3\\0.5.1\\blake3.0.5.1.nupkg.sha512",
     "C:\\Users\\helen.KEELWORKS\\.nuget\\packages\\humanizer.core\\2.2.0\\humanizer.core.2.2.0.nupkg.sha512",

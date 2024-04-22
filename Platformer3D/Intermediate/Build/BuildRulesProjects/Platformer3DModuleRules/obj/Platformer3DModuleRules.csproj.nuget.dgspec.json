@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\helen.KEELWORKS\\Documents\\Unreal Projects\\Platformer3D\\Intermediate\\Build\\BuildRulesProjects\\Platformer3DModuleRules\\Platformer3DModuleRules.csproj": {}
+    "C:\\Users\\helen.KEELWORKS\\Documents\\GitHub\\Platformer3D\\Platformer3D\\Intermediate\\Build\\BuildRulesProjects\\Platformer3DModuleRules\\Platformer3DModuleRules.csproj": {}
   },
   "projects": {
-    "C:\\Users\\helen.KEELWORKS\\Documents\\Unreal Projects\\Platformer3D\\Intermediate\\Build\\BuildRulesProjects\\Platformer3DModuleRules\\Platformer3DModuleRules.csproj": {
+    "C:\\Users\\helen.KEELWORKS\\Documents\\GitHub\\Platformer3D\\Platformer3D\\Intermediate\\Build\\BuildRulesProjects\\Platformer3DModuleRules\\Platformer3DModuleRules.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\helen.KEELWORKS\\Documents\\Unreal Projects\\Platformer3D\\Intermediate\\Build\\BuildRulesProjects\\Platformer3DModuleRules\\Platformer3DModuleRules.csproj",
+        "projectUniqueName": "C:\\Users\\helen.KEELWORKS\\Documents\\GitHub\\Platformer3D\\Platformer3D\\Intermediate\\Build\\BuildRulesProjects\\Platformer3DModuleRules\\Platformer3DModuleRules.csproj",
         "projectName": "Platformer3DModuleRules",
-        "projectPath": "C:\\Users\\helen.KEELWORKS\\Documents\\Unreal Projects\\Platformer3D\\Intermediate\\Build\\BuildRulesProjects\\Platformer3DModuleRules\\Platformer3DModuleRules.csproj",
+        "projectPath": "C:\\Users\\helen.KEELWORKS\\Documents\\GitHub\\Platformer3D\\Platformer3D\\Intermediate\\Build\\BuildRulesProjects\\Platformer3DModuleRules\\Platformer3DModuleRules.csproj",
         "packagesPath": "C:\\Users\\helen.KEELWORKS\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\helen.KEELWORKS\\Documents\\Unreal Projects\\Platformer3D\\Intermediate\\Build\\BuildRulesProjects\\Platformer3DModuleRules\\obj\\",
+        "outputPath": "C:\\Users\\helen.KEELWORKS\\Documents\\GitHub\\Platformer3D\\Platformer3D\\Intermediate\\Build\\BuildRulesProjects\\Platformer3DModuleRules\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

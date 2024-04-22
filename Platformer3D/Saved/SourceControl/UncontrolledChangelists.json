@@ -1,0 +1,29 @@
+{
+	"version": 1,
+	"changelists": [
+		{
+			"guid": "00000000000000000000000000000000",
+			"description": "Default Uncontrolled Changelist",
+			"files": [
+				"C:/Users/helen.KEELWORKS/Documents/GitHub/Platformer3D/Platformer3D/Content/Maps/Map_Level01.umap",
+				"C:/Users/helen.KEELWORKS/Documents/GitHub/Platformer3D/Platformer3D/Content/MyGM_GameLevel.uasset",
+				"C:/Users/helen.KEELWORKS/Documents/GitHub/Platformer3D/Platformer3D/Content/GM_GameLevel.uasset",
+				"C:/Users/helen.KEELWORKS/Documents/GitHub/Platformer3D/Platformer3D/Content/Core/GM_GameLevel.uasset",
+				"C:/Users/helen.KEELWORKS/Documents/GitHub/Platformer3D/Platformer3D/Content/Core/GameSettings/GM_GameLevel.uasset",
+				"C:/Users/helen.KEELWORKS/Documents/GitHub/Platformer3D/Platformer3D/Content/Core/GameSettings/GI_Platformer.uasset",
+				"C:/Users/helen.KEELWORKS/Documents/GitHub/Platformer3D/Platformer3D/Content/Core/Player/BP_PlayerCharacter.uasset",
+				"C:/Users/helen.KEELWORKS/Documents/GitHub/Platformer3D/Platformer3D/Content/Core/Player/PC_Player.uasset",
+				"C:/Users/helen.KEELWORKS/Documents/GitHub/Platformer3D/Platformer3D/Content/Core/Player/BP_PlayerHUD.uasset",
+				"C:/Users/helen.KEELWORKS/Documents/GitHub/Platformer3D/Platformer3D/Content/Assets/Characters/Player/Mesh/Ch09_1001_Diffuse.uasset",
+				"C:/Users/helen.KEELWORKS/Documents/GitHub/Platformer3D/Platformer3D/Content/Assets/Characters/Player/Mesh/Ch09_1001_Glossiness.uasset",
+				"C:/Users/helen.KEELWORKS/Documents/GitHub/Platformer3D/Platformer3D/Content/Assets/Characters/Player/Mesh/Ch09_1001_Normal.uasset",
+				"C:/Users/helen.KEELWORKS/Documents/GitHub/Platformer3D/Platformer3D/Content/Assets/Characters/Player/Mesh/Ch09_1001_Specular.uasset",
+				"C:/Users/helen.KEELWORKS/Documents/GitHub/Platformer3D/Platformer3D/Content/Assets/Characters/Player/Mesh/Ch09_body.uasset",
+				"C:/Users/helen.KEELWORKS/Documents/GitHub/Platformer3D/Platformer3D/Content/Assets/Characters/Player/Mesh/Ch09_nonPBR.uasset",
+				"C:/Users/helen.KEELWORKS/Documents/GitHub/Platformer3D/Platformer3D/Content/Assets/Characters/Player/Mesh/Ch09_nonPBR_Anim_mixamo_com.uasset",
+				"C:/Users/helen.KEELWORKS/Documents/GitHub/Platformer3D/Platformer3D/Content/Assets/Characters/Player/Mesh/Ch09_nonPBR_PhysicsAsset.uasset",
+				"C:/Users/helen.KEELWORKS/Documents/GitHub/Platformer3D/Platformer3D/Content/Assets/Characters/Player/Mesh/Ch09_nonPBR_Skeleton.uasset"
+			]
+		}
+	]
+}

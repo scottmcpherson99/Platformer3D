@@ -1,0 +1,12 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UnrealEditor-Platformer3D.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"C:\Users\helen.KEELWORKS\Documents\Unreal Projects\Platformer3D\Intermediate\Build\Win64\x64\Platformer3DEditor\Development\Engine\SharedPCH.Engine.Cpp20.h.obj"
+"C:\Users\helen.KEELWORKS\Documents\Unreal Projects\Platformer3D\Intermediate\Build\Win64\x64\UnrealEditor\Development\Platformer3D\Platformer3D.cpp.obj"
+"C:\Users\helen.KEELWORKS\Documents\Unreal Projects\Platformer3D\Intermediate\Build\Win64\x64\UnrealEditor\Development\Platformer3D\Default.rc2.res"
+/OUT:"C:\Users\helen.KEELWORKS\Documents\Unreal Projects\Platformer3D\Intermediate\Build\Win64\x64\UnrealEditor\Development\Platformer3D\UnrealEditor-Platformer3D.lib"

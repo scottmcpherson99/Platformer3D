@@ -1,0 +1,14 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\users\\helen.keelworks\\documents\\unreal projects\\platformer3d\\source\\platformer3d\\platformer3d.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\users\\helen.keelworks\\documents\\unreal projects\\platformer3d\\intermediate\\build\\win64\\x64\\platformer3deditor\\development\\engine\\sharedpch.engine.cpp20.h.pch",
+        "Includes": [
+            "c:\\users\\helen.keelworks\\documents\\unreal projects\\platformer3d\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\platformer3d\\definitions.platformer3d.h",
+            "c:\\users\\helen.keelworks\\documents\\unreal projects\\platformer3d\\source\\platformer3d\\platformer3d.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

@@ -5,6 +5,12 @@
 			"guid": "00000000000000000000000000000000",
 			"description": "Default Uncontrolled Changelist",
 			"files": [
+				"D:/Unreal Projects/GitHub/Platformer3D/Platformer3D/Content/Assets/Characters/Player/Animations/ABP_Player.uasset",
+				"D:/Unreal Projects/GitHub/Platformer3D/Platformer3D/Content/Input/InputActions/IA_Move.uasset",
+				"D:/Unreal Projects/GitHub/Platformer3D/Platformer3D/Content/Input/InputActions/IA_Look.uasset",
+				"D:/Unreal Projects/GitHub/Platformer3D/Platformer3D/Content/Input/InputActions/IA_Jump.uasset",
+				"D:/Unreal Projects/GitHub/Platformer3D/Platformer3D/Content/Input/InputActions/IA_CrouchSlide.uasset",
+				"D:/Unreal Projects/GitHub/Platformer3D/Platformer3D/Content/Input/IMC_Player.uasset",
 				"C:/Users/helen.KEELWORKS/Documents/GitHub/Platformer3D/Platformer3D/Content/Maps/Map_Level01.umap",
 				"C:/Users/helen.KEELWORKS/Documents/GitHub/Platformer3D/Platformer3D/Content/Core/GameSettings/GM_GameLevel.uasset",
 				"C:/Users/helen.KEELWORKS/Documents/GitHub/Platformer3D/Platformer3D/Content/Core/GameSettings/GI_Platformer.uasset",

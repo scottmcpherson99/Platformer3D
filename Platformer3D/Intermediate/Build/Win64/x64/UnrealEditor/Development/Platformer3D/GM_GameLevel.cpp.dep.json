@@ -1,0 +1,19 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\users\\helen.keelworks\\documents\\github\\platformer3d\\platformer3d\\source\\platformer3d\\private\\core\\gamesettings\\gm_gamelevel.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\users\\helen.keelworks\\documents\\github\\platformer3d\\platformer3d\\intermediate\\build\\win64\\x64\\platformer3deditor\\development\\unrealed\\sharedpch.unrealed.cpp20.h.pch",
+        "Includes": [
+            "c:\\users\\helen.keelworks\\documents\\github\\platformer3d\\platformer3d\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\platformer3d\\definitions.platformer3d.h",
+            "c:\\users\\helen.keelworks\\documents\\github\\platformer3d\\platformer3d\\source\\platformer3d\\public\\core\\gamesettings\\gm_gamelevel.h",
+            "d:\\ue_5.3\\engine\\source\\runtime\\engine\\classes\\gameframework\\gamemodebase.h",
+            "d:\\ue_5.3\\engine\\source\\runtime\\engine\\classes\\engine\\serverstatreplicator.h",
+            "d:\\ue_5.3\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\serverstatreplicator.generated.h",
+            "d:\\ue_5.3\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\gamemodebase.generated.h",
+            "c:\\users\\helen.keelworks\\documents\\github\\platformer3d\\platformer3d\\intermediate\\build\\win64\\unrealeditor\\inc\\platformer3d\\uht\\gm_gamelevel.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

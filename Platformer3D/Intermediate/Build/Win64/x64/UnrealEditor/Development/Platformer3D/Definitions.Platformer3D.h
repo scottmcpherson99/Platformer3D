@@ -1,4 +1,4 @@
-#include "C:/Users/helen.KEELWORKS/Documents/GitHub/Platformer3D/Platformer3D/Intermediate/Build/Win64/x64/Platformer3DEditor/Development/Engine/SharedDefinitions.Engine.Cpp20.h"
+#include "C:/Users/helen.KEELWORKS/Documents/GitHub/Platformer3D/Platformer3D/Intermediate/Build/Win64/x64/Platformer3DEditor/Development/UnrealEd/SharedDefinitions.UnrealEd.Cpp20.h"
 #undef UE_IS_ENGINE_MODULE
 #undef DEPRECATED_FORGAME
 #define DEPRECATED_FORGAME DEPRECATED
@@ -22,3 +22,8 @@
 #define DEPRECATED_FORGAME DEPRECATED
 #define UE_DEPRECATED_FORGAME UE_DEPRECATED
 #define PLATFORMER3D_API DLLEXPORT
+#define ENHANCEDINPUT_API DLLIMPORT
+#define WITH_GAMEPLAY_DEBUGGER_CORE 1
+#define WITH_GAMEPLAY_DEBUGGER 1
+#define WITH_GAMEPLAY_DEBUGGER_MENU 1
+#define AIMODULE_API DLLIMPORT

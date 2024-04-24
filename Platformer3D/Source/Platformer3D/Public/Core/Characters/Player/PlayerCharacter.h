@@ -10,8 +10,8 @@
 /**
  * 
  */
-UCLASS()
-class PLATFORMER3D_API APlayerCharacter : public ABaseCharacter
+UCLASS(config=Game)
+class APlayerCharacter : public ABaseCharacter
 {
 	GENERATED_BODY()
 	

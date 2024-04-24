@@ -4,10 +4,12 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
+#include "AbilitySystemInterface.h"
+#include <GameplayEffectTypes.h>
 #include "BaseCharacter.generated.h"
 
 UCLASS()
-class PLATFORMER3D_API ABaseCharacter : public ACharacter
+class PLATFORMER3D_API ABaseCharacter : public ACharacter, public IAbilitySystemInterface
 {
 	GENERATED_BODY()
 
@@ -26,4 +28,12 @@ public:
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
+	//~ Begin IAbilitySystemInterface
+/** Returns our Ability System Component. */
+	virtual UAbilitySystemComponent* GetAbilitySystemComponent() const override;
+	//~ End IAbilitySystemInterface
+
+		 /** Ability System Component. Required to use Gameplay Attributes and Gameplay Abilities. */
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Abilities", meta = (AllowPrivateAccess = "true"))
+	UAbilitySystemComponent* AbilitySystemComponent;
 };

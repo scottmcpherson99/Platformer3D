@@ -13,3 +13,4 @@ SharedPCH.Engine.ShadowErrors.h.pch
 SharedPCH.Engine.NonOptimized.ShadowErrors.h.pch
 SharedPCH.Engine.Cpp20.h.pch
 SharedPCH.UnrealEd.Cpp20.h.pch
+SharedPCH.UnrealEd.NonOptimized.Cpp20.h.pch

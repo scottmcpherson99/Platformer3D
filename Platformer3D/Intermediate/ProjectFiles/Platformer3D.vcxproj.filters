@@ -45,6 +45,15 @@
     <Filter Include="Source\Platformer3D\Private\Core">
       <UniqueIdentifier>{E47F35B8-2727-30BF-9EC2-465DC973FB3E}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source\Platformer3D\Private\Core\AbilitySystem">
+      <UniqueIdentifier>{50780D3E-B2DE-3ADD-B053-B042EF3F9EAE}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Platformer3D\Private\Core\AbilitySystem\Attributes">
+      <UniqueIdentifier>{3F12D3D2-85B6-3114-9088-A3E5D1C188A8}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Platformer3D\Private\Core\AbilitySystem\Attributes\BasicAttributeSet.cpp">
+      <Filter>Source\Platformer3D\Private\Core\AbilitySystem\Attributes</Filter>
+    </ClCompile>
     <Filter Include="Source\Platformer3D\Private\Core\Characters">
       <UniqueIdentifier>{21C6E73E-84A7-3A53-A629-69AC5FF47FB0}</UniqueIdentifier>
     </Filter>
@@ -84,6 +93,15 @@
     <Filter Include="Source\Platformer3D\Public\Core">
       <UniqueIdentifier>{8BFD3E82-D8CF-3D93-B448-D23756335E8B}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source\Platformer3D\Public\Core\AbilitySystem">
+      <UniqueIdentifier>{9DE3E43D-2166-3506-9FE3-4778E9618109}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Platformer3D\Public\Core\AbilitySystem\Attributes">
+      <UniqueIdentifier>{DA73C352-F13A-3BE3-9F65-4A81BD41A301}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\Platformer3D\Public\Core\AbilitySystem\Attributes\BasicAttributeSet.h">
+      <Filter>Source\Platformer3D\Public\Core\AbilitySystem\Attributes</Filter>
+    </ClInclude>
     <Filter Include="Source\Platformer3D\Public\Core\Characters">
       <UniqueIdentifier>{F3AD07BC-6C65-3920-B1D7-02698207710A}</UniqueIdentifier>
     </Filter>

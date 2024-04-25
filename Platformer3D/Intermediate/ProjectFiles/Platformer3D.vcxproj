@@ -121,6 +121,11 @@
       <AdditionalOptions>$(ClCompile_AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <ClInclude Include="..\..\Source\Platformer3D\Platformer3D.h"/>
+    <ClCompile Include="..\..\Source\Platformer3D\Private\Core\AbilitySystem\Attributes\BasicAttributeSet.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles)</ForcedIncludeFiles>
+      <AdditionalOptions>$(ClCompile_AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
     <ClCompile Include="..\..\Source\Platformer3D\Private\Core\Characters\BaseCharacter.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles)</ForcedIncludeFiles>
@@ -156,6 +161,7 @@
       <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles)</ForcedIncludeFiles>
       <AdditionalOptions>$(ClCompile_AdditionalOptions)</AdditionalOptions>
     </ClCompile>
+    <ClInclude Include="..\..\Source\Platformer3D\Public\Core\AbilitySystem\Attributes\BasicAttributeSet.h"/>
     <ClInclude Include="..\..\Source\Platformer3D\Public\Core\Characters\BaseCharacter.h"/>
     <ClInclude Include="..\..\Source\Platformer3D\Public\Core\Characters\Player\HUD_Player.h"/>
     <ClInclude Include="..\..\Source\Platformer3D\Public\Core\Characters\Player\PC_Player.h"/>

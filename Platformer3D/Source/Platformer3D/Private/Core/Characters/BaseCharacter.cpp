@@ -3,6 +3,7 @@
 
 #include "Core/Characters/BaseCharacter.h"
 #include "AbilitySystemComponent.h"
+#include "Core/AbilitySystem/Attributes/BasicAttributeSet.h"
 
 // Sets default values
 ABaseCharacter::ABaseCharacter()
@@ -21,6 +22,11 @@ void ABaseCharacter::BeginPlay()
 {
 	Super::BeginPlay();
 	
+	if (IsValid(AbilitySystemComponent))
+	{
+		// initialises attribute set
+		BasicAttributeSet = AbilitySystemComponent->GetSet<UBasicAttributeSet>();
+	}
 }
 
 // Called every frame

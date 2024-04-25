@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
+#include "InputActionValue.h"
 #include "AbilitySystemInterface.h"
 #include <GameplayEffectTypes.h>
 #include "BaseCharacter.generated.h"
@@ -28,12 +29,19 @@ public:
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
-	//~ Begin IAbilitySystemInterface
-/** Returns our Ability System Component. */
-	virtual UAbilitySystemComponent* GetAbilitySystemComponent() const override;
-	//~ End IAbilitySystemInterface
 
-		 /** Ability System Component. Required to use Gameplay Attributes and Gameplay Abilities. */
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Abilities", meta = (AllowPrivateAccess = "true"))
-	UAbilitySystemComponent* AbilitySystemComponent;
+//----------------------------------------------------------------------------------------------------- GAS
+	/** Ability System Component. Required to use Gameplay Attributes and Gameplay Abilities. */
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "GAS", meta = (AllowPrivateAccess = "true"))
+	class UAbilitySystemComponent* AbilitySystemComponent;
+
+	//~ Begin IAbilitySystemInterface
+	/** Returns our Ability System Component. */
+	virtual class UAbilitySystemComponent* GetAbilitySystemComponent() const override;
+	//~ End IAbilitySystemInterface
+	
+	// the basic attribuite set for the character
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "GAS", meta = (AllowPrivateAccess = "true"))
+	const class UBasicAttributeSet* BasicAttributeSet;
+//-----------------------------------------------------------------------------------------------------
 };

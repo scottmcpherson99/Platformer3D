@@ -17,13 +17,13 @@ void EmptyLinkFunctionForGeneratedCodePlatformer3D_init() {}
 				nullptr,
 				0,
 				PKG_CompiledIn | 0x00000000,
-				0x270E6015,
-				0xAC6F413A,
+				0x2AAD332B,
+				0x98EBF2DD,
 				METADATA_PARAMS(0, nullptr)
 			};
 			UECodeGen_Private::ConstructUPackage(Z_Registration_Info_UPackage__Script_Platformer3D.OuterSingleton, PackageParams);
 		}
 		return Z_Registration_Info_UPackage__Script_Platformer3D.OuterSingleton;
 	}
-	static FRegisterCompiledInInfo Z_CompiledInDeferPackage_UPackage__Script_Platformer3D(Z_Construct_UPackage__Script_Platformer3D, TEXT("/Script/Platformer3D"), Z_Registration_Info_UPackage__Script_Platformer3D, CONSTRUCT_RELOAD_VERSION_INFO(FPackageReloadVersionInfo, 0x270E6015, 0xAC6F413A));
+	static FRegisterCompiledInInfo Z_CompiledInDeferPackage_UPackage__Script_Platformer3D(Z_Construct_UPackage__Script_Platformer3D, TEXT("/Script/Platformer3D"), Z_Registration_Info_UPackage__Script_Platformer3D, CONSTRUCT_RELOAD_VERSION_INFO(FPackageReloadVersionInfo, 0x2AAD332B, 0x98EBF2DD));
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

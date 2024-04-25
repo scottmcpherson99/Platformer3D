@@ -24,6 +24,9 @@
     <None Include="..\..\Config\DefaultGame.ini">
       <Filter>Config</Filter>
     </None>
+    <None Include="..\..\Config\DefaultGameplayTags.ini">
+      <Filter>Config</Filter>
+    </None>
     <None Include="..\..\Config\DefaultInput.ini">
       <Filter>Config</Filter>
     </None>
@@ -59,6 +62,15 @@
     </Filter>
     <ClCompile Include="..\..\Source\Platformer3D\Private\Core\Characters\BaseCharacter.cpp">
       <Filter>Source\Platformer3D\Private\Core\Characters</Filter>
+    </ClCompile>
+    <Filter Include="Source\Platformer3D\Private\Core\Characters\Enemy">
+      <UniqueIdentifier>{D5EBBF5C-75E1-3CF7-9231-F69553AE01FE}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Platformer3D\Private\Core\Characters\Enemy\BasicEnemy">
+      <UniqueIdentifier>{81E86660-51A3-3DE0-B30D-AFEF96243DC5}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Platformer3D\Private\Core\Characters\Enemy\BasicEnemy\BasicEnemy.cpp">
+      <Filter>Source\Platformer3D\Private\Core\Characters\Enemy\BasicEnemy</Filter>
     </ClCompile>
     <Filter Include="Source\Platformer3D\Private\Core\Characters\Player">
       <UniqueIdentifier>{9011C711-6495-30E9-89A5-2276AE1D2420}</UniqueIdentifier>
@@ -107,6 +119,15 @@
     </Filter>
     <ClInclude Include="..\..\Source\Platformer3D\Public\Core\Characters\BaseCharacter.h">
       <Filter>Source\Platformer3D\Public\Core\Characters</Filter>
+    </ClInclude>
+    <Filter Include="Source\Platformer3D\Public\Core\Characters\Enemy">
+      <UniqueIdentifier>{0658B395-E8D0-3E52-948D-57EF2B8791F2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Platformer3D\Public\Core\Characters\Enemy\BasicEnemy">
+      <UniqueIdentifier>{D798E3FB-5A41-3873-917D-289C5794D885}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\Platformer3D\Public\Core\Characters\Enemy\BasicEnemy\BasicEnemy.h">
+      <Filter>Source\Platformer3D\Public\Core\Characters\Enemy\BasicEnemy</Filter>
     </ClInclude>
     <Filter Include="Source\Platformer3D\Public\Core\Characters\Player">
       <UniqueIdentifier>{4ABA8770-A26C-3CA9-BC6F-03743B5234C9}</UniqueIdentifier>

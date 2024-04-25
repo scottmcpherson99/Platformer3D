@@ -113,6 +113,7 @@
     <None Include="..\..\Config\DefaultEditor.ini"/>
     <None Include="..\..\Config\DefaultEngine.ini"/>
     <None Include="..\..\Config\DefaultGame.ini"/>
+    <None Include="..\..\Config\DefaultGameplayTags.ini"/>
     <None Include="..\..\Config\DefaultInput.ini"/>
     <None Include="..\..\Source\Platformer3D\Platformer3D.Build.cs"/>
     <ClCompile Include="..\..\Source\Platformer3D\Platformer3D.cpp">
@@ -127,6 +128,11 @@
       <AdditionalOptions>$(ClCompile_AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <ClCompile Include="..\..\Source\Platformer3D\Private\Core\Characters\BaseCharacter.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles)</ForcedIncludeFiles>
+      <AdditionalOptions>$(ClCompile_AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Platformer3D\Private\Core\Characters\Enemy\BasicEnemy\BasicEnemy.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles)</ForcedIncludeFiles>
       <AdditionalOptions>$(ClCompile_AdditionalOptions)</AdditionalOptions>
@@ -163,6 +169,7 @@
     </ClCompile>
     <ClInclude Include="..\..\Source\Platformer3D\Public\Core\AbilitySystem\Attributes\BasicAttributeSet.h"/>
     <ClInclude Include="..\..\Source\Platformer3D\Public\Core\Characters\BaseCharacter.h"/>
+    <ClInclude Include="..\..\Source\Platformer3D\Public\Core\Characters\Enemy\BasicEnemy\BasicEnemy.h"/>
     <ClInclude Include="..\..\Source\Platformer3D\Public\Core\Characters\Player\HUD_Player.h"/>
     <ClInclude Include="..\..\Source\Platformer3D\Public\Core\Characters\Player\PC_Player.h"/>
     <ClInclude Include="..\..\Source\Platformer3D\Public\Core\Characters\Player\PlayerCharacter.h"/>

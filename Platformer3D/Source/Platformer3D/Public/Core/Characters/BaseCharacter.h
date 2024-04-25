@@ -44,4 +44,15 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "GAS", meta = (AllowPrivateAccess = "true"))
 	const class UBasicAttributeSet* BasicAttributeSet;
 //-----------------------------------------------------------------------------------------------------
+
+
+//----------------------------------------------------------------------------------------------------- Attack
+	// the basic attack logic
+	UFUNCTION(BlueprintImplementableEvent, BlueprintCallable, Category = "Attack", meta = (DisplayName = "Do Basic Attack"))
+	void BP_DoBasicAttack();
+
+	// the spell range
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Attack")
+	float SpellRange = 1000;
+//-----------------------------------------------------------------------------------------------------
 };

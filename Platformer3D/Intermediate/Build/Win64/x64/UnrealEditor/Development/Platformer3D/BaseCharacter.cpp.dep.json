@@ -73,7 +73,10 @@
             "d:\\ue_5.3\\engine\\plugins\\runtime\\gameplayabilities\\intermediate\\build\\win64\\unrealeditor\\inc\\gameplayabilities\\uht\\abilitysystemreplicationproxyinterface.generated.h",
             "d:\\ue_5.3\\engine\\plugins\\runtime\\gameplayabilities\\intermediate\\build\\win64\\unrealeditor\\inc\\gameplayabilities\\uht\\abilitysystemcomponent.generated.h",
             "c:\\users\\helen.keelworks\\documents\\github\\platformer3d\\platformer3d\\source\\platformer3d\\public\\core\\abilitysystem\\attributes\\basicattributeset.h",
-            "c:\\users\\helen.keelworks\\documents\\github\\platformer3d\\platformer3d\\intermediate\\build\\win64\\unrealeditor\\inc\\platformer3d\\uht\\basicattributeset.generated.h"
+            "c:\\users\\helen.keelworks\\documents\\github\\platformer3d\\platformer3d\\intermediate\\build\\win64\\unrealeditor\\inc\\platformer3d\\uht\\basicattributeset.generated.h",
+            "d:\\ue_5.3\\engine\\source\\runtime\\engine\\classes\\kismet\\kismetsystemlibrary.h",
+            "d:\\ue_5.3\\engine\\source\\runtime\\coreuobject\\public\\uobject\\propertyaccessutil.h",
+            "d:\\ue_5.3\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\kismetsystemlibrary.generated.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

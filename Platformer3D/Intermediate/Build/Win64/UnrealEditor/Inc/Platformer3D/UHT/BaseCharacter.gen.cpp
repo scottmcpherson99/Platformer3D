@@ -17,8 +17,43 @@ void EmptyLinkFunctionForGeneratedCodeBaseCharacter() {}
 	PLATFORMER3D_API UClass* Z_Construct_UClass_UBasicAttributeSet_NoRegister();
 	UPackage* Z_Construct_UPackage__Script_Platformer3D();
 // End Cross Module References
+	static FName NAME_ABaseCharacter_BP_DoBasicAttack = FName(TEXT("BP_DoBasicAttack"));
+	void ABaseCharacter::BP_DoBasicAttack()
+	{
+		ProcessEvent(FindFunctionChecked(NAME_ABaseCharacter_BP_DoBasicAttack),NULL);
+	}
 	void ABaseCharacter::StaticRegisterNativesABaseCharacter()
 	{
+	}
+	struct Z_Construct_UFunction_ABaseCharacter_BP_DoBasicAttack_Statics
+	{
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UECodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ABaseCharacter_BP_DoBasicAttack_Statics::Function_MetaDataParams[] = {
+		{ "Category", "Attack" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "//----------------------------------------------------------------------------------------------------- Attack\n// the basic attack logic\n" },
+#endif
+		{ "DisplayName", "Do Basic Attack" },
+		{ "ModuleRelativePath", "Public/Core/Characters/BaseCharacter.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "----------------------------------------------------------------------------------------------------- Attack\n the basic attack logic" },
+#endif
+	};
+#endif
+	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ABaseCharacter_BP_DoBasicAttack_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ABaseCharacter, nullptr, "BP_DoBasicAttack", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x0C020800, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ABaseCharacter_BP_DoBasicAttack_Statics::Function_MetaDataParams), Z_Construct_UFunction_ABaseCharacter_BP_DoBasicAttack_Statics::Function_MetaDataParams) };
+	UFunction* Z_Construct_UFunction_ABaseCharacter_BP_DoBasicAttack()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_ABaseCharacter_BP_DoBasicAttack_Statics::FuncParams);
+		}
+		return ReturnFunction;
 	}
 	IMPLEMENT_CLASS_NO_AUTO_REGISTRATION(ABaseCharacter);
 	UClass* Z_Construct_UClass_ABaseCharacter_NoRegister()
@@ -28,6 +63,7 @@ void EmptyLinkFunctionForGeneratedCodeBaseCharacter() {}
 	struct Z_Construct_UClass_ABaseCharacter_Statics
 	{
 		static UObject* (*const DependentSingletons[])();
+		static const FClassFunctionLinkInfo FuncInfo[];
 #if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
@@ -39,6 +75,10 @@ void EmptyLinkFunctionForGeneratedCodeBaseCharacter() {}
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_BasicAttributeSet_MetaData[];
 #endif
 		static const UECodeGen_Private::FObjectPropertyParams NewProp_BasicAttributeSet;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_SpellRange_MetaData[];
+#endif
+		static const UECodeGen_Private::FFloatPropertyParams NewProp_SpellRange;
 		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const UECodeGen_Private::FImplementedInterfaceParams InterfaceParams[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
@@ -49,6 +89,10 @@ void EmptyLinkFunctionForGeneratedCodeBaseCharacter() {}
 		(UObject* (*)())Z_Construct_UPackage__Script_Platformer3D,
 	};
 	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_ABaseCharacter_Statics::DependentSingletons) < 16);
+	const FClassFunctionLinkInfo Z_Construct_UClass_ABaseCharacter_Statics::FuncInfo[] = {
+		{ &Z_Construct_UFunction_ABaseCharacter_BP_DoBasicAttack, "BP_DoBasicAttack" }, // 1923879687
+	};
+	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_ABaseCharacter_Statics::FuncInfo) < 2048);
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ABaseCharacter_Statics::Class_MetaDataParams[] = {
 		{ "HideCategories", "Navigation" },
@@ -87,9 +131,23 @@ void EmptyLinkFunctionForGeneratedCodeBaseCharacter() {}
 	};
 #endif
 	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABaseCharacter_Statics::NewProp_BasicAttributeSet = { "BasicAttributeSet", nullptr, (EPropertyFlags)0x001000000008001d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABaseCharacter, BasicAttributeSet), Z_Construct_UClass_UBasicAttributeSet_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_ABaseCharacter_Statics::NewProp_BasicAttributeSet_MetaData), Z_Construct_UClass_ABaseCharacter_Statics::NewProp_BasicAttributeSet_MetaData) };
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ABaseCharacter_Statics::NewProp_SpellRange_MetaData[] = {
+		{ "Category", "Attack" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// the spell range\n" },
+#endif
+		{ "ModuleRelativePath", "Public/Core/Characters/BaseCharacter.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "the spell range" },
+#endif
+	};
+#endif
+	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ABaseCharacter_Statics::NewProp_SpellRange = { "SpellRange", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABaseCharacter, SpellRange), METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_ABaseCharacter_Statics::NewProp_SpellRange_MetaData), Z_Construct_UClass_ABaseCharacter_Statics::NewProp_SpellRange_MetaData) };
 	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ABaseCharacter_Statics::PropPointers[] = {
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABaseCharacter_Statics::NewProp_AbilitySystemComponent,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABaseCharacter_Statics::NewProp_BasicAttributeSet,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABaseCharacter_Statics::NewProp_SpellRange,
 	};
 		const UECodeGen_Private::FImplementedInterfaceParams Z_Construct_UClass_ABaseCharacter_Statics::InterfaceParams[] = {
 			{ Z_Construct_UClass_UAbilitySystemInterface_NoRegister, (int32)VTABLE_OFFSET(ABaseCharacter, IAbilitySystemInterface), false },  // 3195502011
@@ -103,11 +161,11 @@ void EmptyLinkFunctionForGeneratedCodeBaseCharacter() {}
 		"Game",
 		&StaticCppClassTypeInfo,
 		DependentSingletons,
-		nullptr,
+		FuncInfo,
 		Z_Construct_UClass_ABaseCharacter_Statics::PropPointers,
 		InterfaceParams,
 		UE_ARRAY_COUNT(DependentSingletons),
-		0,
+		UE_ARRAY_COUNT(FuncInfo),
 		UE_ARRAY_COUNT(Z_Construct_UClass_ABaseCharacter_Statics::PropPointers),
 		UE_ARRAY_COUNT(InterfaceParams),
 		0x009000A4u,
@@ -133,9 +191,9 @@ void EmptyLinkFunctionForGeneratedCodeBaseCharacter() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Platformer3D_Source_Platformer3D_Public_Core_Characters_BaseCharacter_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_ABaseCharacter, ABaseCharacter::StaticClass, TEXT("ABaseCharacter"), &Z_Registration_Info_UClass_ABaseCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ABaseCharacter), 1017236238U) },
+		{ Z_Construct_UClass_ABaseCharacter, ABaseCharacter::StaticClass, TEXT("ABaseCharacter"), &Z_Registration_Info_UClass_ABaseCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ABaseCharacter), 3589618021U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Platformer3D_Source_Platformer3D_Public_Core_Characters_BaseCharacter_h_3380166750(TEXT("/Script/Platformer3D"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Platformer3D_Source_Platformer3D_Public_Core_Characters_BaseCharacter_h_1127374506(TEXT("/Script/Platformer3D"),
 		Z_CompiledInDeferFile_FID_Platformer3D_Source_Platformer3D_Public_Core_Characters_BaseCharacter_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Platformer3D_Source_Platformer3D_Public_Core_Characters_BaseCharacter_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

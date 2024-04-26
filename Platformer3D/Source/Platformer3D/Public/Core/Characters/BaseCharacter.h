@@ -55,4 +55,10 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Attack")
 	float SpellRange = 1000;
 //-----------------------------------------------------------------------------------------------------
+
+
+//----------------------------------------------------------------------------------------------------- Jump
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Jump")
+	bool bPreparingToJump = false;
+//-----------------------------------------------------------------------------------------------------
 };

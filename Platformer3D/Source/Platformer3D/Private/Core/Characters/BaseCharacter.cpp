@@ -48,27 +48,4 @@ UAbilitySystemComponent* ABaseCharacter::GetAbilitySystemComponent() const
 {
 	return AbilitySystemComponent;
 }
-/*
-void ABaseCharacter::DoBasicAttack()
-{
-	// start a sphere trace along the spell range
-	// get the location and direction for the magic cast
-	FRotator SpawnDirection;
-	FTransform SocketTransform = GetMesh()->GetSocketTransform("RightHand");
-	FVector SpawnLocation;
-	SpawnDirection = GetActorRotation();//FRotator(GetMesh()->GetForwardVector().X, GetMesh()->GetForwardVector().Y, GetMesh()->GetForwardVector().Z);
-	//GetActorEyesViewPoint(SpawnLocation, SpawnDirection);
-	SpawnLocation = SocketTransform.GetLocation();
-
-	FActorSpawnParameters SpawnParams;
-	SpawnParams.Owner = this;
-	SpawnParams.Instigator = GetInstigator();
-
-	//DrawDebugLine(GetWorld(), SpawnLocation, (SpawnLocation + (SpawnDirection.Vector() * SpellRange)), FColor::Orange, false, 3.f, 12, 4);
-
-	FHitResult HitResult;
-	FCollisionQueryParams QueryParams;
-	
-	UKismetSystemLibrary::
-}*/
 

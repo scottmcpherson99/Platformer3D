@@ -8,6 +8,9 @@
 #include "EnhancedInputComponent.h"
 #include "EnhancedInputSubsystems.h"
 #include "Core/Characters/Player/PC_Player.h"
+#include "Core/Characters/Player/HUD_Player.h"
+#include "UI/InGame/InGameHUD.h"
+#include "Core/AbilitySystem/Attributes/BasicAttributeSet.h"
 
 APlayerCharacter::APlayerCharacter()
 {
@@ -34,6 +37,21 @@ void APlayerCharacter::BeginPlay()
 			Subsystem->AddMappingContext(PlayerMappingContext, 0);
 		}
 	}
+
+	// get the player controller
+	if (APC_Player* PC = Cast<APC_Player>(GetController()))
+	{
+		// get the HUD
+		if (AHUD_Player* HUD = Cast<AHUD_Player>(PC->GetHUD()))
+		{
+			HUD->UpdateHealthHUD(BasicAttributeSet->GetHealth() / BasicAttributeSet->GetMaxHealth());
+			HUD->UpdateManaHUD(BasicAttributeSet->GetMana() / BasicAttributeSet->GetMaxMana());
+		}
+	}
+
+	// Attribute change callbacks
+	HealthChangedDelegateHandle = AbilitySystemComponent->GetGameplayAttributeValueChangeDelegate(BasicAttributeSet->GetHealthAttribute()).AddUObject(this, &APlayerCharacter::HealthChanged);
+	ManaChangedDelegateHandle = AbilitySystemComponent->GetGameplayAttributeValueChangeDelegate(BasicAttributeSet->GetManaAttribute()).AddUObject(this, &APlayerCharacter::ManaChanged);
 }
 
 void APlayerCharacter::Tick(float DeltaTime)
@@ -81,5 +99,37 @@ void APlayerCharacter::Look(const FInputActionValue& Value)
 	{
 		AddControllerYawInput(LookAxisValue.X);
 		AddControllerPitchInput(LookAxisValue.Y);
+	}
+}
+
+void APlayerCharacter::HealthChanged(const FOnAttributeChangeData& Data)
+{
+	float Health = Data.NewValue;
+	float MaxHealth = BasicAttributeSet->MaxHealth.GetBaseValue();
+	// update floating status bar
+	// get the player controller
+	if (APC_Player* PC = Cast<APC_Player>(GetController()))
+	{
+		// get the HUD
+		if (AHUD_Player* HUD = Cast<AHUD_Player>(PC->GetHUD()))
+		{
+			HUD->UpdateHealthHUD(Health/MaxHealth);
+		}
+	}
+}
+
+void APlayerCharacter::ManaChanged(const FOnAttributeChangeData& Data)
+{
+	float Mana = Data.NewValue;
+	float MaxMana = BasicAttributeSet->MaxMana.GetBaseValue();
+	// update floating status bar
+	// get the player controller
+	if (APC_Player* PC = Cast<APC_Player>(GetController()))
+	{
+		// get the HUD
+		if (AHUD_Player* HUD = Cast<AHUD_Player>(PC->GetHUD()))
+		{
+			HUD->UpdateManaHUD(Mana / MaxMana);
+		}
 	}
 }

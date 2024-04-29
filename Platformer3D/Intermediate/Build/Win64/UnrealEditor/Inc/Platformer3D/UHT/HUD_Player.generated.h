@@ -17,7 +17,12 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #define FID_Platformer3D_Source_Platformer3D_Public_Core_Characters_Player_HUD_Player_h_15_SPARSE_DATA
 #define FID_Platformer3D_Source_Platformer3D_Public_Core_Characters_Player_HUD_Player_h_15_SPARSE_DATA_PROPERTY_ACCESSORS
 #define FID_Platformer3D_Source_Platformer3D_Public_Core_Characters_Player_HUD_Player_h_15_EDITOR_ONLY_SPARSE_DATA_PROPERTY_ACCESSORS
-#define FID_Platformer3D_Source_Platformer3D_Public_Core_Characters_Player_HUD_Player_h_15_RPC_WRAPPERS_NO_PURE_DECLS
+#define FID_Platformer3D_Source_Platformer3D_Public_Core_Characters_Player_HUD_Player_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
+ \
+	DECLARE_FUNCTION(execHideInGameHUD); \
+	DECLARE_FUNCTION(execShowInGameHUD);
+
+
 #define FID_Platformer3D_Source_Platformer3D_Public_Core_Characters_Player_HUD_Player_h_15_ACCESSORS
 #define FID_Platformer3D_Source_Platformer3D_Public_Core_Characters_Player_HUD_Player_h_15_INCLASS_NO_PURE_DECLS \
 private: \
@@ -29,8 +34,6 @@ public: \
 
 
 #define FID_Platformer3D_Source_Platformer3D_Public_Core_Characters_Player_HUD_Player_h_15_ENHANCED_CONSTRUCTORS \
-	/** Standard constructor, called after all reflected properties have been initialized */ \
-	NO_API AHUD_Player(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API AHUD_Player(AHUD_Player&&); \
@@ -38,7 +41,7 @@ private: \
 public: \
 	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, AHUD_Player); \
 	DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(AHUD_Player); \
-	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(AHUD_Player) \
+	DEFINE_DEFAULT_CONSTRUCTOR_CALL(AHUD_Player) \
 	NO_API virtual ~AHUD_Player();
 
 

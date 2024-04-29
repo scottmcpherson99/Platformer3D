@@ -73,4 +73,13 @@ protected:
 	// look around
 	void Look(const FInputActionValue& Value);
 //--------------------------------------------------------------------------
+
+
+//-------------------------------------------------------------------------- GAS
+public:
+	
+
+	// Attributes changed callbacks
+	virtual void HealthChanged(const FOnAttributeChangeData& Data);
+	virtual void ManaChanged(const FOnAttributeChangeData& Data);
 };

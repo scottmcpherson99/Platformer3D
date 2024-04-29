@@ -43,6 +43,26 @@ public:
 	// the basic attribuite set for the character
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "GAS", meta = (AllowPrivateAccess = "true"))
 	const class UBasicAttributeSet* BasicAttributeSet;
+
+	// getters for attributes from attribute set. Returns current value
+	// get current health
+	UFUNCTION(BlueprintCallable, BlueprintPure, Category = "Player Attributes")
+	float GetCurrentHealth() const;
+
+	// get max health
+	UFUNCTION(BlueprintCallable, BlueprintPure, Category = "Player Attributes")
+	float GetMaxHealth() const;
+
+	// get current mana
+	UFUNCTION(BlueprintCallable, BlueprintPure, Category = "Player Attributes")
+	float GetCurrentMana() const;
+
+	// get max mana
+	UFUNCTION(BlueprintCallable, BlueprintPure, Category = "Player Attributes")
+	float GetMaxMana() const;
+
+	FDelegateHandle HealthChangedDelegateHandle;
+	FDelegateHandle ManaChangedDelegateHandle;
 //-----------------------------------------------------------------------------------------------------
 
 

@@ -33,12 +33,5 @@ float UGEC_Regen::CalculateBaseMagnitude_Implementation(const FGameplayEffectSpe
 	float MaxHealth = 0.0f;
 	GetCapturedAttributeMagnitude(MaxHealthDef, Spec, EvaluationParameters, MaxHealth);
 
-	/*if (Health + 1.0f < MaxHealth)
-	{
-		return MaxHealth - Health;
-	}
-
-	return 1.0f;
-	*/
 	return FMath::Clamp(MaxHealth - Health, 0.0f, 1.0f);
 }

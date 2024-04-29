@@ -60,6 +60,9 @@
     <Filter Include="Source\Platformer3D\Private\Core\AbilitySystem\Calculations">
       <UniqueIdentifier>{8C0F0140-6249-36A2-9A53-CBC484199AEF}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\Platformer3D\Private\Core\AbilitySystem\Calculations\GEC_ManaRegen.cpp">
+      <Filter>Source\Platformer3D\Private\Core\AbilitySystem\Calculations</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\Platformer3D\Private\Core\AbilitySystem\Calculations\GEC_Regen.cpp">
       <Filter>Source\Platformer3D\Private\Core\AbilitySystem\Calculations</Filter>
     </ClCompile>
@@ -108,6 +111,15 @@
     <Filter Include="Source\Platformer3D\Private\UI">
       <UniqueIdentifier>{18EF1B7D-BC0F-3FA6-9CEB-6ADD8DADECDB}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source\Platformer3D\Private\UI\InGame">
+      <UniqueIdentifier>{0E5548B1-4973-373D-8687-CDC74686D92F}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Platformer3D\Private\UI\InGame\InGameHUD.cpp">
+      <Filter>Source\Platformer3D\Private\UI\InGame</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Platformer3D\Private\UI\InGame\InGameSliderStat.cpp">
+      <Filter>Source\Platformer3D\Private\UI\InGame</Filter>
+    </ClCompile>
     <Filter Include="Source\Platformer3D\Private\UI\Shared">
       <UniqueIdentifier>{CCDA3908-4DA4-3449-93AD-76F3E9AACD64}</UniqueIdentifier>
     </Filter>
@@ -132,6 +144,9 @@
     <Filter Include="Source\Platformer3D\Public\Core\AbilitySystem\Calculations">
       <UniqueIdentifier>{394014D0-2A10-30AD-AD49-BCDE8CDE3B78}</UniqueIdentifier>
     </Filter>
+    <ClInclude Include="..\..\Source\Platformer3D\Public\Core\AbilitySystem\Calculations\GEC_ManaRegen.h">
+      <Filter>Source\Platformer3D\Public\Core\AbilitySystem\Calculations</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\Source\Platformer3D\Public\Core\AbilitySystem\Calculations\GEC_Regen.h">
       <Filter>Source\Platformer3D\Public\Core\AbilitySystem\Calculations</Filter>
     </ClInclude>
@@ -180,6 +195,15 @@
     <Filter Include="Source\Platformer3D\Public\UI">
       <UniqueIdentifier>{6D660575-93AE-31B8-9AB6-2284CE3AD492}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source\Platformer3D\Public\UI\InGame">
+      <UniqueIdentifier>{25D8103F-39A6-36BD-BE7C-4726DC6016AA}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\Platformer3D\Public\UI\InGame\InGameHUD.h">
+      <Filter>Source\Platformer3D\Public\UI\InGame</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Platformer3D\Public\UI\InGame\InGameSliderStat.h">
+      <Filter>Source\Platformer3D\Public\UI\InGame</Filter>
+    </ClInclude>
     <Filter Include="Source\Platformer3D\Public\UI\Shared">
       <UniqueIdentifier>{06386450-3ABC-3999-A6E3-4C3881E15B62}</UniqueIdentifier>
     </Filter>

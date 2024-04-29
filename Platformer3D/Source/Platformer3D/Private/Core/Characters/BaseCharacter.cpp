@@ -49,3 +49,22 @@ UAbilitySystemComponent* ABaseCharacter::GetAbilitySystemComponent() const
 	return AbilitySystemComponent;
 }
 
+float ABaseCharacter::GetCurrentHealth() const
+{
+	return BasicAttributeSet->GetHealth();
+}
+
+float ABaseCharacter::GetMaxHealth() const
+{
+	return BasicAttributeSet->GetMaxHealth();
+}
+
+float ABaseCharacter::GetCurrentMana() const
+{
+	return BasicAttributeSet->GetMana();
+}
+
+float ABaseCharacter::GetMaxMana() const
+{
+	return BasicAttributeSet->GetMaxMana();
+}

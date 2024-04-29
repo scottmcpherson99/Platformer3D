@@ -3,3 +3,6 @@
 
 #include "Core/Characters/Enemy/BasicEnemy/BasicEnemy.h"
 
+ABasicEnemy::ABasicEnemy()
+{
+}

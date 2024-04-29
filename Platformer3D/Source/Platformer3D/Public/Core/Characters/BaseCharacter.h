@@ -63,6 +63,10 @@ public:
 
 	FDelegateHandle HealthChangedDelegateHandle;
 	FDelegateHandle ManaChangedDelegateHandle;
+
+	// Attributes changed callbacks
+	virtual void HealthChanged(const FOnAttributeChangeData& Data);
+	virtual void ManaChanged(const FOnAttributeChangeData& Data);
 //-----------------------------------------------------------------------------------------------------
 
 
@@ -77,8 +81,23 @@ public:
 //-----------------------------------------------------------------------------------------------------
 
 
-//----------------------------------------------------------------------------------------------------- Jump
+//----------------------------------------------------------------------------------------------------- Death
+	// set the character to die
+	UFUNCTION(BlueprintCallable, Category = "Death")
+	virtual void StartCharacterDeath();
+
+	// the basic attack logic
+	UFUNCTION(BlueprintImplementableEvent, BlueprintCallable, Category = "Attack", meta = (DisplayName = "Do Death Event"))
+	void BP_EventDeath();
+//-----------------------------------------------------------------------------------------------------
+
+
+//----------------------------------------------------------------------------------------------------- Attributes
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Jump")
 	bool bPreparingToJump = false;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Jump")
+	bool bIsDead = false;
 //-----------------------------------------------------------------------------------------------------
+
 };

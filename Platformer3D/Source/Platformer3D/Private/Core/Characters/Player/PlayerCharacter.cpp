@@ -49,10 +49,7 @@ void APlayerCharacter::BeginPlay()
 		}
 	}
 
-	// Attribute change callbacks
-	HealthChangedDelegateHandle = AbilitySystemComponent->GetGameplayAttributeValueChangeDelegate(BasicAttributeSet->GetHealthAttribute()).AddUObject(this, &APlayerCharacter::HealthChanged);
-	ManaChangedDelegateHandle = AbilitySystemComponent->GetGameplayAttributeValueChangeDelegate(BasicAttributeSet->GetManaAttribute()).AddUObject(this, &APlayerCharacter::ManaChanged);
-}
+	}
 
 void APlayerCharacter::Tick(float DeltaTime)
 {
@@ -116,6 +113,11 @@ void APlayerCharacter::HealthChanged(const FOnAttributeChangeData& Data)
 			HUD->UpdateHealthHUD(Health/MaxHealth);
 		}
 	}
+
+	if (Health <= 0)
+	{
+		StartCharacterDeath();
+	}
 }
 
 void APlayerCharacter::ManaChanged(const FOnAttributeChangeData& Data)
@@ -131,5 +133,15 @@ void APlayerCharacter::ManaChanged(const FOnAttributeChangeData& Data)
 		{
 			HUD->UpdateManaHUD(Mana / MaxMana);
 		}
+	}
+}
+
+void APlayerCharacter::StartCharacterDeath()
+{
+	bIsDead = true;
+
+	if (APC_Player* PC = Cast<APC_Player>(GetController()))
+	{
+		DisableInput(PC);
 	}
 }

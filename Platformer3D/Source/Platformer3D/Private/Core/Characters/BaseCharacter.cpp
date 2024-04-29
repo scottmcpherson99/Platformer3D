@@ -4,7 +4,9 @@
 #include "Core/Characters/BaseCharacter.h"
 #include "AbilitySystemComponent.h"
 #include "Core/AbilitySystem/Attributes/BasicAttributeSet.h"
+#include "Core/Characters/Player/PC_Player.h"
 #include "Kismet/KismetSystemLibrary.h"
+#include "Components/CapsuleComponent.h"
 
 // Sets default values
 ABaseCharacter::ABaseCharacter()
@@ -27,6 +29,11 @@ void ABaseCharacter::BeginPlay()
 	{
 		// initialises attribute set
 		BasicAttributeSet = AbilitySystemComponent->GetSet<UBasicAttributeSet>();
+
+		// Attribute change callbacks
+		HealthChangedDelegateHandle = AbilitySystemComponent->GetGameplayAttributeValueChangeDelegate(BasicAttributeSet->GetHealthAttribute()).AddUObject(this, &ABaseCharacter::HealthChanged);
+		ManaChangedDelegateHandle = AbilitySystemComponent->GetGameplayAttributeValueChangeDelegate(BasicAttributeSet->GetManaAttribute()).AddUObject(this, &ABaseCharacter::ManaChanged);
+
 	}
 }
 
@@ -65,6 +72,29 @@ float ABaseCharacter::GetCurrentMana() const
 }
 
 float ABaseCharacter::GetMaxMana() const
-{
+{	
 	return BasicAttributeSet->GetMaxMana();
+}
+
+void ABaseCharacter::HealthChanged(const FOnAttributeChangeData& Data)
+{
+	float Health = Data.NewValue;
+
+	if (Health <= 0)
+	{
+		StartCharacterDeath();
+	}
+}
+
+void ABaseCharacter::ManaChanged(const FOnAttributeChangeData& Data)
+{
+}
+
+void ABaseCharacter::StartCharacterDeath()
+{
+	bIsDead = true;
+
+	GetCapsuleComponent()->SetCollisionEnabled(ECollisionEnabled::NoCollision);
+
+	BP_EventDeath();
 }

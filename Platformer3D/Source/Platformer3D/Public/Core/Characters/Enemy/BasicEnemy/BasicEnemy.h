@@ -13,5 +13,7 @@ UCLASS()
 class PLATFORMER3D_API ABasicEnemy : public ABaseCharacter
 {
 	GENERATED_BODY()
-	
+public:
+	ABasicEnemy();
+
 };

@@ -17,6 +17,13 @@ void EmptyLinkFunctionForGeneratedCodeBaseCharacter() {}
 	PLATFORMER3D_API UClass* Z_Construct_UClass_UBasicAttributeSet_NoRegister();
 	UPackage* Z_Construct_UPackage__Script_Platformer3D();
 // End Cross Module References
+	DEFINE_FUNCTION(ABaseCharacter::execStartCharacterDeath)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->StartCharacterDeath();
+		P_NATIVE_END;
+	}
 	DEFINE_FUNCTION(ABaseCharacter::execGetMaxMana)
 	{
 		P_FINISH;
@@ -50,6 +57,11 @@ void EmptyLinkFunctionForGeneratedCodeBaseCharacter() {}
 	{
 		ProcessEvent(FindFunctionChecked(NAME_ABaseCharacter_BP_DoBasicAttack),NULL);
 	}
+	static FName NAME_ABaseCharacter_BP_EventDeath = FName(TEXT("BP_EventDeath"));
+	void ABaseCharacter::BP_EventDeath()
+	{
+		ProcessEvent(FindFunctionChecked(NAME_ABaseCharacter_BP_EventDeath),NULL);
+	}
 	void ABaseCharacter::StaticRegisterNativesABaseCharacter()
 	{
 		UClass* Class = ABaseCharacter::StaticClass();
@@ -58,6 +70,7 @@ void EmptyLinkFunctionForGeneratedCodeBaseCharacter() {}
 			{ "GetCurrentMana", &ABaseCharacter::execGetCurrentMana },
 			{ "GetMaxHealth", &ABaseCharacter::execGetMaxHealth },
 			{ "GetMaxMana", &ABaseCharacter::execGetMaxMana },
+			{ "StartCharacterDeath", &ABaseCharacter::execStartCharacterDeath },
 		};
 		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 	}
@@ -88,6 +101,36 @@ void EmptyLinkFunctionForGeneratedCodeBaseCharacter() {}
 		if (!ReturnFunction)
 		{
 			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_ABaseCharacter_BP_DoBasicAttack_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_ABaseCharacter_BP_EventDeath_Statics
+	{
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UECodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ABaseCharacter_BP_EventDeath_Statics::Function_MetaDataParams[] = {
+		{ "Category", "Attack" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// the basic attack logic\n" },
+#endif
+		{ "DisplayName", "Do Death Event" },
+		{ "ModuleRelativePath", "Public/Core/Characters/BaseCharacter.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "the basic attack logic" },
+#endif
+	};
+#endif
+	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ABaseCharacter_BP_EventDeath_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ABaseCharacter, nullptr, "BP_EventDeath", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x0C020800, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ABaseCharacter_BP_EventDeath_Statics::Function_MetaDataParams), Z_Construct_UFunction_ABaseCharacter_BP_EventDeath_Statics::Function_MetaDataParams) };
+	UFunction* Z_Construct_UFunction_ABaseCharacter_BP_EventDeath()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_ABaseCharacter_BP_EventDeath_Statics::FuncParams);
 		}
 		return ReturnFunction;
 	}
@@ -255,6 +298,35 @@ void EmptyLinkFunctionForGeneratedCodeBaseCharacter() {}
 		}
 		return ReturnFunction;
 	}
+	struct Z_Construct_UFunction_ABaseCharacter_StartCharacterDeath_Statics
+	{
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UECodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ABaseCharacter_StartCharacterDeath_Statics::Function_MetaDataParams[] = {
+		{ "Category", "Death" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "//----------------------------------------------------------------------------------------------------- Death\n// set the character to die\n" },
+#endif
+		{ "ModuleRelativePath", "Public/Core/Characters/BaseCharacter.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "----------------------------------------------------------------------------------------------------- Death\n set the character to die" },
+#endif
+	};
+#endif
+	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ABaseCharacter_StartCharacterDeath_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ABaseCharacter, nullptr, "StartCharacterDeath", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020400, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ABaseCharacter_StartCharacterDeath_Statics::Function_MetaDataParams), Z_Construct_UFunction_ABaseCharacter_StartCharacterDeath_Statics::Function_MetaDataParams) };
+	UFunction* Z_Construct_UFunction_ABaseCharacter_StartCharacterDeath()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_ABaseCharacter_StartCharacterDeath_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
 	IMPLEMENT_CLASS_NO_AUTO_REGISTRATION(ABaseCharacter);
 	UClass* Z_Construct_UClass_ABaseCharacter_NoRegister()
 	{
@@ -284,6 +356,11 @@ void EmptyLinkFunctionForGeneratedCodeBaseCharacter() {}
 #endif
 		static void NewProp_bPreparingToJump_SetBit(void* Obj);
 		static const UECodeGen_Private::FBoolPropertyParams NewProp_bPreparingToJump;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_bIsDead_MetaData[];
+#endif
+		static void NewProp_bIsDead_SetBit(void* Obj);
+		static const UECodeGen_Private::FBoolPropertyParams NewProp_bIsDead;
 		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const UECodeGen_Private::FImplementedInterfaceParams InterfaceParams[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
@@ -296,10 +373,12 @@ void EmptyLinkFunctionForGeneratedCodeBaseCharacter() {}
 	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_ABaseCharacter_Statics::DependentSingletons) < 16);
 	const FClassFunctionLinkInfo Z_Construct_UClass_ABaseCharacter_Statics::FuncInfo[] = {
 		{ &Z_Construct_UFunction_ABaseCharacter_BP_DoBasicAttack, "BP_DoBasicAttack" }, // 1923879687
+		{ &Z_Construct_UFunction_ABaseCharacter_BP_EventDeath, "BP_EventDeath" }, // 4271029173
 		{ &Z_Construct_UFunction_ABaseCharacter_GetCurrentHealth, "GetCurrentHealth" }, // 1356328081
 		{ &Z_Construct_UFunction_ABaseCharacter_GetCurrentMana, "GetCurrentMana" }, // 2576175798
 		{ &Z_Construct_UFunction_ABaseCharacter_GetMaxHealth, "GetMaxHealth" }, // 1080572027
 		{ &Z_Construct_UFunction_ABaseCharacter_GetMaxMana, "GetMaxMana" }, // 2637075554
+		{ &Z_Construct_UFunction_ABaseCharacter_StartCharacterDeath, "StartCharacterDeath" }, // 1167122322
 	};
 	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_ABaseCharacter_Statics::FuncInfo) < 2048);
 #if WITH_METADATA
@@ -357,11 +436,11 @@ void EmptyLinkFunctionForGeneratedCodeBaseCharacter() {}
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ABaseCharacter_Statics::NewProp_bPreparingToJump_MetaData[] = {
 		{ "Category", "Jump" },
 #if !UE_BUILD_SHIPPING
-		{ "Comment", "//----------------------------------------------------------------------------------------------------- Jump\n" },
+		{ "Comment", "//----------------------------------------------------------------------------------------------------- Attributes\n" },
 #endif
 		{ "ModuleRelativePath", "Public/Core/Characters/BaseCharacter.h" },
 #if !UE_BUILD_SHIPPING
-		{ "ToolTip", "----------------------------------------------------------------------------------------------------- Jump" },
+		{ "ToolTip", "----------------------------------------------------------------------------------------------------- Attributes" },
 #endif
 	};
 #endif
@@ -370,11 +449,23 @@ void EmptyLinkFunctionForGeneratedCodeBaseCharacter() {}
 		((ABaseCharacter*)Obj)->bPreparingToJump = 1;
 	}
 	const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_ABaseCharacter_Statics::NewProp_bPreparingToJump = { "bPreparingToJump", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(ABaseCharacter), &Z_Construct_UClass_ABaseCharacter_Statics::NewProp_bPreparingToJump_SetBit, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_ABaseCharacter_Statics::NewProp_bPreparingToJump_MetaData), Z_Construct_UClass_ABaseCharacter_Statics::NewProp_bPreparingToJump_MetaData) };
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ABaseCharacter_Statics::NewProp_bIsDead_MetaData[] = {
+		{ "Category", "Jump" },
+		{ "ModuleRelativePath", "Public/Core/Characters/BaseCharacter.h" },
+	};
+#endif
+	void Z_Construct_UClass_ABaseCharacter_Statics::NewProp_bIsDead_SetBit(void* Obj)
+	{
+		((ABaseCharacter*)Obj)->bIsDead = 1;
+	}
+	const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_ABaseCharacter_Statics::NewProp_bIsDead = { "bIsDead", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(ABaseCharacter), &Z_Construct_UClass_ABaseCharacter_Statics::NewProp_bIsDead_SetBit, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_ABaseCharacter_Statics::NewProp_bIsDead_MetaData), Z_Construct_UClass_ABaseCharacter_Statics::NewProp_bIsDead_MetaData) };
 	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ABaseCharacter_Statics::PropPointers[] = {
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABaseCharacter_Statics::NewProp_AbilitySystemComponent,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABaseCharacter_Statics::NewProp_BasicAttributeSet,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABaseCharacter_Statics::NewProp_SpellRange,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABaseCharacter_Statics::NewProp_bPreparingToJump,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABaseCharacter_Statics::NewProp_bIsDead,
 	};
 		const UECodeGen_Private::FImplementedInterfaceParams Z_Construct_UClass_ABaseCharacter_Statics::InterfaceParams[] = {
 			{ Z_Construct_UClass_UAbilitySystemInterface_NoRegister, (int32)VTABLE_OFFSET(ABaseCharacter, IAbilitySystemInterface), false },  // 3195502011
@@ -418,9 +509,9 @@ void EmptyLinkFunctionForGeneratedCodeBaseCharacter() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Platformer3D_Source_Platformer3D_Public_Core_Characters_BaseCharacter_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_ABaseCharacter, ABaseCharacter::StaticClass, TEXT("ABaseCharacter"), &Z_Registration_Info_UClass_ABaseCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ABaseCharacter), 3179963481U) },
+		{ Z_Construct_UClass_ABaseCharacter, ABaseCharacter::StaticClass, TEXT("ABaseCharacter"), &Z_Registration_Info_UClass_ABaseCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ABaseCharacter), 1873567899U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Platformer3D_Source_Platformer3D_Public_Core_Characters_BaseCharacter_h_805551209(TEXT("/Script/Platformer3D"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Platformer3D_Source_Platformer3D_Public_Core_Characters_BaseCharacter_h_4241257200(TEXT("/Script/Platformer3D"),
 		Z_CompiledInDeferFile_FID_Platformer3D_Source_Platformer3D_Public_Core_Characters_BaseCharacter_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Platformer3D_Source_Platformer3D_Public_Core_Characters_BaseCharacter_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

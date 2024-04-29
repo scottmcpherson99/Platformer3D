@@ -17,7 +17,7 @@ void EmptyLinkFunctionForGeneratedCodePlatformer3D_init() {}
 				nullptr,
 				0,
 				PKG_CompiledIn | 0x00000000,
-				0xC9625985,
+				0x2480DCD0,
 				0x91F2CADC,
 				METADATA_PARAMS(0, nullptr)
 			};
@@ -25,5 +25,5 @@ void EmptyLinkFunctionForGeneratedCodePlatformer3D_init() {}
 		}
 		return Z_Registration_Info_UPackage__Script_Platformer3D.OuterSingleton;
 	}
-	static FRegisterCompiledInInfo Z_CompiledInDeferPackage_UPackage__Script_Platformer3D(Z_Construct_UPackage__Script_Platformer3D, TEXT("/Script/Platformer3D"), Z_Registration_Info_UPackage__Script_Platformer3D, CONSTRUCT_RELOAD_VERSION_INFO(FPackageReloadVersionInfo, 0xC9625985, 0x91F2CADC));
+	static FRegisterCompiledInInfo Z_CompiledInDeferPackage_UPackage__Script_Platformer3D(Z_Construct_UPackage__Script_Platformer3D, TEXT("/Script/Platformer3D"), Z_Registration_Info_UPackage__Script_Platformer3D, CONSTRUCT_RELOAD_VERSION_INFO(FPackageReloadVersionInfo, 0x2480DCD0, 0x91F2CADC));
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

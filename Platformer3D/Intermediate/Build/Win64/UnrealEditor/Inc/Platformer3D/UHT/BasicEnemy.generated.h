@@ -29,8 +29,6 @@ public: \
 
 
 #define FID_Platformer3D_Source_Platformer3D_Public_Core_Characters_Enemy_BasicEnemy_BasicEnemy_h_15_ENHANCED_CONSTRUCTORS \
-	/** Standard constructor, called after all reflected properties have been initialized */ \
-	NO_API ABasicEnemy(); \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API ABasicEnemy(ABasicEnemy&&); \

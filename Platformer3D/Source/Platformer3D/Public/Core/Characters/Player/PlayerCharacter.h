@@ -77,9 +77,13 @@ protected:
 
 //-------------------------------------------------------------------------- GAS
 public:
-	
-
 	// Attributes changed callbacks
-	virtual void HealthChanged(const FOnAttributeChangeData& Data);
-	virtual void ManaChanged(const FOnAttributeChangeData& Data);
+	virtual void HealthChanged(const FOnAttributeChangeData& Data) override;
+	virtual void ManaChanged(const FOnAttributeChangeData& Data) override;
+//--------------------------------------------------------------------------
+
+
+//-------------------------------------------------------------------------- Death
+	virtual void StartCharacterDeath() override;
+//-------------------------------------------------------------------------- 
 };

@@ -9,6 +9,7 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+class UButton;
 #ifdef PLATFORMER3D_GI_Platformer_generated_h
 #error "GI_Platformer.generated.h already included, missing '#pragma once' in GI_Platformer.h"
 #endif
@@ -17,7 +18,12 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #define FID_Platformer3D_Source_Platformer3D_Public_Core_GameSettings_GI_Platformer_h_15_SPARSE_DATA
 #define FID_Platformer3D_Source_Platformer3D_Public_Core_GameSettings_GI_Platformer_h_15_SPARSE_DATA_PROPERTY_ACCESSORS
 #define FID_Platformer3D_Source_Platformer3D_Public_Core_GameSettings_GI_Platformer_h_15_EDITOR_ONLY_SPARSE_DATA_PROPERTY_ACCESSORS
-#define FID_Platformer3D_Source_Platformer3D_Public_Core_GameSettings_GI_Platformer_h_15_RPC_WRAPPERS_NO_PURE_DECLS
+#define FID_Platformer3D_Source_Platformer3D_Public_Core_GameSettings_GI_Platformer_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
+ \
+	DECLARE_FUNCTION(execGetLastFocusedButton); \
+	DECLARE_FUNCTION(execSetLastFocusedButton);
+
+
 #define FID_Platformer3D_Source_Platformer3D_Public_Core_GameSettings_GI_Platformer_h_15_ACCESSORS
 #define FID_Platformer3D_Source_Platformer3D_Public_Core_GameSettings_GI_Platformer_h_15_INCLASS_NO_PURE_DECLS \
 private: \

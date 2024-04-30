@@ -9,6 +9,7 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+class UInGameHUD;
 #ifdef PLATFORMER3D_HUD_Player_generated_h
 #error "HUD_Player.generated.h already included, missing '#pragma once' in HUD_Player.h"
 #endif
@@ -19,6 +20,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #define FID_Platformer3D_Source_Platformer3D_Public_Core_Characters_Player_HUD_Player_h_15_EDITOR_ONLY_SPARSE_DATA_PROPERTY_ACCESSORS
 #define FID_Platformer3D_Source_Platformer3D_Public_Core_Characters_Player_HUD_Player_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
  \
+	DECLARE_FUNCTION(execGetHUDWidget); \
 	DECLARE_FUNCTION(execHideInGameHUD); \
 	DECLARE_FUNCTION(execShowInGameHUD);
 

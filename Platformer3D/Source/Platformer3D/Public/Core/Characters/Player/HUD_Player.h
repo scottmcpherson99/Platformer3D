@@ -38,6 +38,7 @@ public:
 
 
 	// get the hud widhet
+	UFUNCTION(BlueprintCallable)
 	class UInGameHUD* GetHUDWidget();
 
 protected:

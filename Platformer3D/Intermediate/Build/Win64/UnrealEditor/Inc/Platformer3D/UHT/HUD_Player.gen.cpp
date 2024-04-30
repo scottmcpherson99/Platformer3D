@@ -16,6 +16,13 @@ void EmptyLinkFunctionForGeneratedCodeHUD_Player() {}
 	PLATFORMER3D_API UClass* Z_Construct_UClass_UInGameHUD_NoRegister();
 	UPackage* Z_Construct_UPackage__Script_Platformer3D();
 // End Cross Module References
+	DEFINE_FUNCTION(AHUD_Player::execGetHUDWidget)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(UInGameHUD**)Z_Param__Result=P_THIS->GetHUDWidget();
+		P_NATIVE_END;
+	}
 	DEFINE_FUNCTION(AHUD_Player::execHideInGameHUD)
 	{
 		P_FINISH;
@@ -34,10 +41,59 @@ void EmptyLinkFunctionForGeneratedCodeHUD_Player() {}
 	{
 		UClass* Class = AHUD_Player::StaticClass();
 		static const FNameNativePtrPair Funcs[] = {
+			{ "GetHUDWidget", &AHUD_Player::execGetHUDWidget },
 			{ "HideInGameHUD", &AHUD_Player::execHideInGameHUD },
 			{ "ShowInGameHUD", &AHUD_Player::execShowInGameHUD },
 		};
 		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
+	}
+	struct Z_Construct_UFunction_AHUD_Player_GetHUDWidget_Statics
+	{
+		struct HUD_Player_eventGetHUDWidget_Parms
+		{
+			UInGameHUD* ReturnValue;
+		};
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_ReturnValue_MetaData[];
+#endif
+		static const UECodeGen_Private::FObjectPropertyParams NewProp_ReturnValue;
+		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UECodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AHUD_Player_GetHUDWidget_Statics::NewProp_ReturnValue_MetaData[] = {
+		{ "EditInline", "true" },
+	};
+#endif
+	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_AHUD_Player_GetHUDWidget_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000080588, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(HUD_Player_eventGetHUDWidget_Parms, ReturnValue), Z_Construct_UClass_UInGameHUD_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_AHUD_Player_GetHUDWidget_Statics::NewProp_ReturnValue_MetaData), Z_Construct_UFunction_AHUD_Player_GetHUDWidget_Statics::NewProp_ReturnValue_MetaData) };
+	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_AHUD_Player_GetHUDWidget_Statics::PropPointers[] = {
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AHUD_Player_GetHUDWidget_Statics::NewProp_ReturnValue,
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AHUD_Player_GetHUDWidget_Statics::Function_MetaDataParams[] = {
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// get the hud widhet\n" },
+#endif
+		{ "ModuleRelativePath", "Public/Core/Characters/Player/HUD_Player.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "get the hud widhet" },
+#endif
+	};
+#endif
+	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_AHUD_Player_GetHUDWidget_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AHUD_Player, nullptr, "GetHUDWidget", nullptr, nullptr, Z_Construct_UFunction_AHUD_Player_GetHUDWidget_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_AHUD_Player_GetHUDWidget_Statics::PropPointers), sizeof(Z_Construct_UFunction_AHUD_Player_GetHUDWidget_Statics::HUD_Player_eventGetHUDWidget_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_AHUD_Player_GetHUDWidget_Statics::Function_MetaDataParams), Z_Construct_UFunction_AHUD_Player_GetHUDWidget_Statics::Function_MetaDataParams) };
+	static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_AHUD_Player_GetHUDWidget_Statics::PropPointers) < 2048);
+	static_assert(sizeof(Z_Construct_UFunction_AHUD_Player_GetHUDWidget_Statics::HUD_Player_eventGetHUDWidget_Parms) < MAX_uint16);
+	UFunction* Z_Construct_UFunction_AHUD_Player_GetHUDWidget()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_AHUD_Player_GetHUDWidget_Statics::FuncParams);
+		}
+		return ReturnFunction;
 	}
 	struct Z_Construct_UFunction_AHUD_Player_HideInGameHUD_Statics
 	{
@@ -125,6 +181,7 @@ void EmptyLinkFunctionForGeneratedCodeHUD_Player() {}
 	};
 	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_AHUD_Player_Statics::DependentSingletons) < 16);
 	const FClassFunctionLinkInfo Z_Construct_UClass_AHUD_Player_Statics::FuncInfo[] = {
+		{ &Z_Construct_UFunction_AHUD_Player_GetHUDWidget, "GetHUDWidget" }, // 595129835
 		{ &Z_Construct_UFunction_AHUD_Player_HideInGameHUD, "HideInGameHUD" }, // 580704224
 		{ &Z_Construct_UFunction_AHUD_Player_ShowInGameHUD, "ShowInGameHUD" }, // 882427704
 	};
@@ -208,9 +265,9 @@ void EmptyLinkFunctionForGeneratedCodeHUD_Player() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Platformer3D_Source_Platformer3D_Public_Core_Characters_Player_HUD_Player_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_AHUD_Player, AHUD_Player::StaticClass, TEXT("AHUD_Player"), &Z_Registration_Info_UClass_AHUD_Player, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AHUD_Player), 3282765942U) },
+		{ Z_Construct_UClass_AHUD_Player, AHUD_Player::StaticClass, TEXT("AHUD_Player"), &Z_Registration_Info_UClass_AHUD_Player, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AHUD_Player), 2449611100U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Platformer3D_Source_Platformer3D_Public_Core_Characters_Player_HUD_Player_h_3508988237(TEXT("/Script/Platformer3D"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Platformer3D_Source_Platformer3D_Public_Core_Characters_Player_HUD_Player_h_111344348(TEXT("/Script/Platformer3D"),
 		Z_CompiledInDeferFile_FID_Platformer3D_Source_Platformer3D_Public_Core_Characters_Player_HUD_Player_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Platformer3D_Source_Platformer3D_Public_Core_Characters_Player_HUD_Player_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

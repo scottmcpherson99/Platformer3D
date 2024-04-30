@@ -1,0 +1,47 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.Platformer3D.cpp.obj": [
+			"AbilitySlot.gen.cpp.obj",
+			"AsyncTaskCooldownChanged.gen.cpp.obj",
+			"BaseCharacter.gen.cpp.obj",
+			"BaseUserWidget.gen.cpp.obj",
+			"BasicAttributeSet.gen.cpp.obj",
+			"BasicEnemy.gen.cpp.obj",
+			"BTService_SetFocusOnTarget.gen.cpp.obj",
+			"BTService_UpdateMovementSpeed.gen.cpp.obj",
+			"BTTask_Wander.gen.cpp.obj",
+			"CollectableBase.gen.cpp.obj",
+			"GEC_ManaRegen.gen.cpp.obj",
+			"GEC_Regen.gen.cpp.obj",
+			"GI_Platformer.gen.cpp.obj",
+			"GM_GameLevel.gen.cpp.obj",
+			"HUD_Player.gen.cpp.obj",
+			"InGameHUD.gen.cpp.obj",
+			"InGameSliderStat.gen.cpp.obj",
+			"PC_Player.gen.cpp.obj",
+			"Platformer3D.init.gen.cpp.obj",
+			"PlayerCharacter.gen.cpp.obj",
+			"Platformer3D.cpp.obj",
+			"AsyncTaskCooldownChanged.cpp.obj",
+			"BasicAttributeSet.cpp.obj",
+			"GEC_ManaRegen.cpp.obj",
+			"GEC_Regen.cpp.obj",
+			"BaseCharacter.cpp.obj",
+			"BasicEnemy.cpp.obj",
+			"BTService_SetFocusOnTarget.cpp.obj",
+			"BTTask_Wander.cpp.obj",
+			"BTService_UpdateMovementSpeed.cpp.obj",
+			"HUD_Player.cpp.obj",
+			"PC_Player.cpp.obj",
+			"PlayerCharacter.cpp.obj",
+			"CollectableBase.cpp.obj",
+			"GI_Platformer.cpp.obj",
+			"GM_GameLevel.cpp.obj",
+			"AbilitySlot.cpp.obj",
+			"InGameHUD.cpp.obj",
+			"InGameSliderStat.cpp.obj",
+			"BaseUserWidget.cpp.obj"
+		]
+	}
+}

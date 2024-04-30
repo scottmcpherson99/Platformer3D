@@ -51,6 +51,15 @@
     <Filter Include="Source\Platformer3D\Private\Core\AbilitySystem">
       <UniqueIdentifier>{50780D3E-B2DE-3ADD-B053-B042EF3F9EAE}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\Platformer3D\Private\Core\AbilitySystem\SpellCasterComponent.cpp">
+      <Filter>Source\Platformer3D\Private\Core\AbilitySystem</Filter>
+    </ClCompile>
+    <Filter Include="Source\Platformer3D\Private\Core\AbilitySystem\AsyncTasks">
+      <UniqueIdentifier>{0313373E-6010-3BD6-AB46-E638BB73F38B}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Platformer3D\Private\Core\AbilitySystem\AsyncTasks\AsyncTaskCooldownChanged.cpp">
+      <Filter>Source\Platformer3D\Private\Core\AbilitySystem\AsyncTasks</Filter>
+    </ClCompile>
     <Filter Include="Source\Platformer3D\Private\Core\AbilitySystem\Attributes">
       <UniqueIdentifier>{3F12D3D2-85B6-3114-9088-A3E5D1C188A8}</UniqueIdentifier>
     </Filter>
@@ -80,6 +89,18 @@
     </Filter>
     <ClCompile Include="..\..\Source\Platformer3D\Private\Core\Characters\Enemy\BasicEnemy\BasicEnemy.cpp">
       <Filter>Source\Platformer3D\Private\Core\Characters\Enemy\BasicEnemy</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Platformer3D\Private\Core\Characters\Enemy\BasicEnemy\BTService_SetFocusOnTarget.cpp">
+      <Filter>Source\Platformer3D\Private\Core\Characters\Enemy\BasicEnemy</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Platformer3D\Private\Core\Characters\Enemy\BasicEnemy\BTTask_Wander.cpp">
+      <Filter>Source\Platformer3D\Private\Core\Characters\Enemy\BasicEnemy</Filter>
+    </ClCompile>
+    <Filter Include="Source\Platformer3D\Private\Core\Characters\Enemy\BasicEnemy\Services">
+      <UniqueIdentifier>{4AC693E9-BAB4-3507-BBC1-22D85B279165}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Platformer3D\Private\Core\Characters\Enemy\BasicEnemy\Services\BTService_UpdateMovementSpeed.cpp">
+      <Filter>Source\Platformer3D\Private\Core\Characters\Enemy\BasicEnemy\Services</Filter>
     </ClCompile>
     <Filter Include="Source\Platformer3D\Private\Core\Characters\Player">
       <UniqueIdentifier>{9011C711-6495-30E9-89A5-2276AE1D2420}</UniqueIdentifier>
@@ -114,6 +135,9 @@
     <Filter Include="Source\Platformer3D\Private\UI\InGame">
       <UniqueIdentifier>{0E5548B1-4973-373D-8687-CDC74686D92F}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\Platformer3D\Private\UI\InGame\AbilitySlot.cpp">
+      <Filter>Source\Platformer3D\Private\UI\InGame</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\Platformer3D\Private\UI\InGame\InGameHUD.cpp">
       <Filter>Source\Platformer3D\Private\UI\InGame</Filter>
     </ClCompile>
@@ -135,6 +159,15 @@
     <Filter Include="Source\Platformer3D\Public\Core\AbilitySystem">
       <UniqueIdentifier>{9DE3E43D-2166-3506-9FE3-4778E9618109}</UniqueIdentifier>
     </Filter>
+    <ClInclude Include="..\..\Source\Platformer3D\Public\Core\AbilitySystem\SpellCasterComponent.h">
+      <Filter>Source\Platformer3D\Public\Core\AbilitySystem</Filter>
+    </ClInclude>
+    <Filter Include="Source\Platformer3D\Public\Core\AbilitySystem\AsyncTasks">
+      <UniqueIdentifier>{7FBC2B05-A41B-3DA3-9193-F262CB9FA781}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\Platformer3D\Public\Core\AbilitySystem\AsyncTasks\AsyncTaskCooldownChanged.h">
+      <Filter>Source\Platformer3D\Public\Core\AbilitySystem\AsyncTasks</Filter>
+    </ClInclude>
     <Filter Include="Source\Platformer3D\Public\Core\AbilitySystem\Attributes">
       <UniqueIdentifier>{DA73C352-F13A-3BE3-9F65-4A81BD41A301}</UniqueIdentifier>
     </Filter>
@@ -164,6 +197,18 @@
     </Filter>
     <ClInclude Include="..\..\Source\Platformer3D\Public\Core\Characters\Enemy\BasicEnemy\BasicEnemy.h">
       <Filter>Source\Platformer3D\Public\Core\Characters\Enemy\BasicEnemy</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Platformer3D\Public\Core\Characters\Enemy\BasicEnemy\BTService_SetFocusOnTarget.h">
+      <Filter>Source\Platformer3D\Public\Core\Characters\Enemy\BasicEnemy</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Platformer3D\Public\Core\Characters\Enemy\BasicEnemy\BTTask_Wander.h">
+      <Filter>Source\Platformer3D\Public\Core\Characters\Enemy\BasicEnemy</Filter>
+    </ClInclude>
+    <Filter Include="Source\Platformer3D\Public\Core\Characters\Enemy\BasicEnemy\Services">
+      <UniqueIdentifier>{9BD60FB4-75C1-3785-8847-1242AE6E9AA2}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\Platformer3D\Public\Core\Characters\Enemy\BasicEnemy\Services\BTService_UpdateMovementSpeed.h">
+      <Filter>Source\Platformer3D\Public\Core\Characters\Enemy\BasicEnemy\Services</Filter>
     </ClInclude>
     <Filter Include="Source\Platformer3D\Public\Core\Characters\Player">
       <UniqueIdentifier>{4ABA8770-A26C-3CA9-BC6F-03743B5234C9}</UniqueIdentifier>
@@ -198,6 +243,9 @@
     <Filter Include="Source\Platformer3D\Public\UI\InGame">
       <UniqueIdentifier>{25D8103F-39A6-36BD-BE7C-4726DC6016AA}</UniqueIdentifier>
     </Filter>
+    <ClInclude Include="..\..\Source\Platformer3D\Public\UI\InGame\AbilitySlot.h">
+      <Filter>Source\Platformer3D\Public\UI\InGame</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\Source\Platformer3D\Public\UI\InGame\InGameHUD.h">
       <Filter>Source\Platformer3D\Public\UI\InGame</Filter>
     </ClInclude>

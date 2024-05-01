@@ -6,7 +6,9 @@
 #include "Core/AbilitySystem/Attributes/BasicAttributeSet.h"
 #include "Core/Characters/Player/PC_Player.h"
 #include "Kismet/KismetSystemLibrary.h"
+#include "Kismet/KismetMathLibrary.h"
 #include "Components/CapsuleComponent.h"
+#include "Core/AbilitySystem/SpellCasterComponent.h"
 
 // Sets default values
 ABaseCharacter::ABaseCharacter()
@@ -18,6 +20,9 @@ ABaseCharacter::ABaseCharacter()
 	AbilitySystemComponent = CreateDefaultSubobject<UAbilitySystemComponent>("AbilitySystemComp");
 	AbilitySystemComponent->SetIsReplicated(true);
 	AbilitySystemComponent->SetReplicationMode(EGameplayEffectReplicationMode::Minimal);
+
+	// set up spell caster component
+	SpellCaster = CreateDefaultSubobject<USpellCasterComponent>("SpellCasterComponent");
 }
 
 // Called when the game starts or when spawned
@@ -88,6 +93,18 @@ void ABaseCharacter::HealthChanged(const FOnAttributeChangeData& Data)
 
 void ABaseCharacter::ManaChanged(const FOnAttributeChangeData& Data)
 {
+}
+
+void ABaseCharacter::DoBasicAttack()
+{
+	// get the socket location for spell start
+	FVector SocketLocation = GetMesh()->GetSocketLocation("RightHand");
+
+	// get the spell end location
+	FVector SpellEndLocation = SocketLocation + (UKismetMathLibrary::GetForwardVector(GetActorRotation()) * SpellRange);
+
+	// cast the spell
+	SpellCaster->BasicAttack(this, SpellRange, BasicSpellWidth, SocketLocation, SpellEndLocation, NS_BasicSpellBeam);
 }
 
 void ABaseCharacter::StartCharacterDeath()

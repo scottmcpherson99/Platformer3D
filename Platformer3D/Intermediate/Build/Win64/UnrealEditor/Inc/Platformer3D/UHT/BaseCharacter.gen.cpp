@@ -12,9 +12,11 @@ void EmptyLinkFunctionForGeneratedCodeBaseCharacter() {}
 	ENGINE_API UClass* Z_Construct_UClass_ACharacter();
 	GAMEPLAYABILITIES_API UClass* Z_Construct_UClass_UAbilitySystemComponent_NoRegister();
 	GAMEPLAYABILITIES_API UClass* Z_Construct_UClass_UAbilitySystemInterface_NoRegister();
+	NIAGARA_API UClass* Z_Construct_UClass_UNiagaraSystem_NoRegister();
 	PLATFORMER3D_API UClass* Z_Construct_UClass_ABaseCharacter();
 	PLATFORMER3D_API UClass* Z_Construct_UClass_ABaseCharacter_NoRegister();
 	PLATFORMER3D_API UClass* Z_Construct_UClass_UBasicAttributeSet_NoRegister();
+	PLATFORMER3D_API UClass* Z_Construct_UClass_USpellCasterComponent_NoRegister();
 	UPackage* Z_Construct_UPackage__Script_Platformer3D();
 // End Cross Module References
 	DEFINE_FUNCTION(ABaseCharacter::execStartCharacterDeath)
@@ -22,6 +24,13 @@ void EmptyLinkFunctionForGeneratedCodeBaseCharacter() {}
 		P_FINISH;
 		P_NATIVE_BEGIN;
 		P_THIS->StartCharacterDeath();
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(ABaseCharacter::execDoBasicAttack)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->DoBasicAttack();
 		P_NATIVE_END;
 	}
 	DEFINE_FUNCTION(ABaseCharacter::execGetMaxMana)
@@ -52,11 +61,6 @@ void EmptyLinkFunctionForGeneratedCodeBaseCharacter() {}
 		*(float*)Z_Param__Result=P_THIS->GetCurrentHealth();
 		P_NATIVE_END;
 	}
-	static FName NAME_ABaseCharacter_BP_DoBasicAttack = FName(TEXT("BP_DoBasicAttack"));
-	void ABaseCharacter::BP_DoBasicAttack()
-	{
-		ProcessEvent(FindFunctionChecked(NAME_ABaseCharacter_BP_DoBasicAttack),NULL);
-	}
 	static FName NAME_ABaseCharacter_BP_EventDeath = FName(TEXT("BP_EventDeath"));
 	void ABaseCharacter::BP_EventDeath()
 	{
@@ -66,6 +70,7 @@ void EmptyLinkFunctionForGeneratedCodeBaseCharacter() {}
 	{
 		UClass* Class = ABaseCharacter::StaticClass();
 		static const FNameNativePtrPair Funcs[] = {
+			{ "DoBasicAttack", &ABaseCharacter::execDoBasicAttack },
 			{ "GetCurrentHealth", &ABaseCharacter::execGetCurrentHealth },
 			{ "GetCurrentMana", &ABaseCharacter::execGetCurrentMana },
 			{ "GetMaxHealth", &ABaseCharacter::execGetMaxHealth },
@@ -73,36 +78,6 @@ void EmptyLinkFunctionForGeneratedCodeBaseCharacter() {}
 			{ "StartCharacterDeath", &ABaseCharacter::execStartCharacterDeath },
 		};
 		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
-	}
-	struct Z_Construct_UFunction_ABaseCharacter_BP_DoBasicAttack_Statics
-	{
-#if WITH_METADATA
-		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
-#endif
-		static const UECodeGen_Private::FFunctionParams FuncParams;
-	};
-#if WITH_METADATA
-	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ABaseCharacter_BP_DoBasicAttack_Statics::Function_MetaDataParams[] = {
-		{ "Category", "Attack" },
-#if !UE_BUILD_SHIPPING
-		{ "Comment", "//----------------------------------------------------------------------------------------------------- Attack\n// the basic attack logic\n" },
-#endif
-		{ "DisplayName", "Do Basic Attack" },
-		{ "ModuleRelativePath", "Public/Core/Characters/BaseCharacter.h" },
-#if !UE_BUILD_SHIPPING
-		{ "ToolTip", "----------------------------------------------------------------------------------------------------- Attack\n the basic attack logic" },
-#endif
-	};
-#endif
-	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ABaseCharacter_BP_DoBasicAttack_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ABaseCharacter, nullptr, "BP_DoBasicAttack", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x0C020800, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ABaseCharacter_BP_DoBasicAttack_Statics::Function_MetaDataParams), Z_Construct_UFunction_ABaseCharacter_BP_DoBasicAttack_Statics::Function_MetaDataParams) };
-	UFunction* Z_Construct_UFunction_ABaseCharacter_BP_DoBasicAttack()
-	{
-		static UFunction* ReturnFunction = nullptr;
-		if (!ReturnFunction)
-		{
-			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_ABaseCharacter_BP_DoBasicAttack_Statics::FuncParams);
-		}
-		return ReturnFunction;
 	}
 	struct Z_Construct_UFunction_ABaseCharacter_BP_EventDeath_Statics
 	{
@@ -131,6 +106,35 @@ void EmptyLinkFunctionForGeneratedCodeBaseCharacter() {}
 		if (!ReturnFunction)
 		{
 			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_ABaseCharacter_BP_EventDeath_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_ABaseCharacter_DoBasicAttack_Statics
+	{
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UECodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ABaseCharacter_DoBasicAttack_Statics::Function_MetaDataParams[] = {
+		{ "Category", "Attack" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "//----------------------------------------------------------------------------------------------------- Attack\n// the basic attack logic\n" },
+#endif
+		{ "ModuleRelativePath", "Public/Core/Characters/BaseCharacter.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "----------------------------------------------------------------------------------------------------- Attack\n the basic attack logic" },
+#endif
+	};
+#endif
+	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ABaseCharacter_DoBasicAttack_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ABaseCharacter, nullptr, "DoBasicAttack", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ABaseCharacter_DoBasicAttack_Statics::Function_MetaDataParams), Z_Construct_UFunction_ABaseCharacter_DoBasicAttack_Statics::Function_MetaDataParams) };
+	UFunction* Z_Construct_UFunction_ABaseCharacter_DoBasicAttack()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_ABaseCharacter_DoBasicAttack_Statics::FuncParams);
 		}
 		return ReturnFunction;
 	}
@@ -340,6 +344,10 @@ void EmptyLinkFunctionForGeneratedCodeBaseCharacter() {}
 		static const UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
 #if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_SpellCaster_MetaData[];
+#endif
+		static const UECodeGen_Private::FObjectPropertyParams NewProp_SpellCaster;
+#if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_AbilitySystemComponent_MetaData[];
 #endif
 		static const UECodeGen_Private::FObjectPropertyParams NewProp_AbilitySystemComponent;
@@ -351,6 +359,14 @@ void EmptyLinkFunctionForGeneratedCodeBaseCharacter() {}
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_SpellRange_MetaData[];
 #endif
 		static const UECodeGen_Private::FFloatPropertyParams NewProp_SpellRange;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_BasicSpellWidth_MetaData[];
+#endif
+		static const UECodeGen_Private::FFloatPropertyParams NewProp_BasicSpellWidth;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_NS_BasicSpellBeam_MetaData[];
+#endif
+		static const UECodeGen_Private::FObjectPropertyParams NewProp_NS_BasicSpellBeam;
 #if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_bPreparingToJump_MetaData[];
 #endif
@@ -372,8 +388,8 @@ void EmptyLinkFunctionForGeneratedCodeBaseCharacter() {}
 	};
 	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_ABaseCharacter_Statics::DependentSingletons) < 16);
 	const FClassFunctionLinkInfo Z_Construct_UClass_ABaseCharacter_Statics::FuncInfo[] = {
-		{ &Z_Construct_UFunction_ABaseCharacter_BP_DoBasicAttack, "BP_DoBasicAttack" }, // 1923879687
 		{ &Z_Construct_UFunction_ABaseCharacter_BP_EventDeath, "BP_EventDeath" }, // 4271029173
+		{ &Z_Construct_UFunction_ABaseCharacter_DoBasicAttack, "DoBasicAttack" }, // 2116396314
 		{ &Z_Construct_UFunction_ABaseCharacter_GetCurrentHealth, "GetCurrentHealth" }, // 1356328081
 		{ &Z_Construct_UFunction_ABaseCharacter_GetCurrentMana, "GetCurrentMana" }, // 2576175798
 		{ &Z_Construct_UFunction_ABaseCharacter_GetMaxHealth, "GetMaxHealth" }, // 1080572027
@@ -388,6 +404,21 @@ void EmptyLinkFunctionForGeneratedCodeBaseCharacter() {}
 		{ "ModuleRelativePath", "Public/Core/Characters/BaseCharacter.h" },
 	};
 #endif
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ABaseCharacter_Statics::NewProp_SpellCaster_MetaData[] = {
+		{ "AllowPrivateAccess", "true" },
+		{ "Category", "Spells" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// spell caster component\n" },
+#endif
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "Public/Core/Characters/BaseCharacter.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "spell caster component" },
+#endif
+	};
+#endif
+	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABaseCharacter_Statics::NewProp_SpellCaster = { "SpellCaster", nullptr, (EPropertyFlags)0x001000000008001d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABaseCharacter, SpellCaster), Z_Construct_UClass_USpellCasterComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_ABaseCharacter_Statics::NewProp_SpellCaster_MetaData), Z_Construct_UClass_ABaseCharacter_Statics::NewProp_SpellCaster_MetaData) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ABaseCharacter_Statics::NewProp_AbilitySystemComponent_MetaData[] = {
 		{ "AllowPrivateAccess", "true" },
@@ -433,6 +464,32 @@ void EmptyLinkFunctionForGeneratedCodeBaseCharacter() {}
 #endif
 	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ABaseCharacter_Statics::NewProp_SpellRange = { "SpellRange", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABaseCharacter, SpellRange), METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_ABaseCharacter_Statics::NewProp_SpellRange_MetaData), Z_Construct_UClass_ABaseCharacter_Statics::NewProp_SpellRange_MetaData) };
 #if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ABaseCharacter_Statics::NewProp_BasicSpellWidth_MetaData[] = {
+		{ "Category", "Attack" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// the spell range\n" },
+#endif
+		{ "ModuleRelativePath", "Public/Core/Characters/BaseCharacter.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "the spell range" },
+#endif
+	};
+#endif
+	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ABaseCharacter_Statics::NewProp_BasicSpellWidth = { "BasicSpellWidth", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABaseCharacter, BasicSpellWidth), METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_ABaseCharacter_Statics::NewProp_BasicSpellWidth_MetaData), Z_Construct_UClass_ABaseCharacter_Statics::NewProp_BasicSpellWidth_MetaData) };
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ABaseCharacter_Statics::NewProp_NS_BasicSpellBeam_MetaData[] = {
+		{ "Category", "Niagara" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// basic spell beam\n" },
+#endif
+		{ "ModuleRelativePath", "Public/Core/Characters/BaseCharacter.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "basic spell beam" },
+#endif
+	};
+#endif
+	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABaseCharacter_Statics::NewProp_NS_BasicSpellBeam = { "NS_BasicSpellBeam", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABaseCharacter, NS_BasicSpellBeam), Z_Construct_UClass_UNiagaraSystem_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_ABaseCharacter_Statics::NewProp_NS_BasicSpellBeam_MetaData), Z_Construct_UClass_ABaseCharacter_Statics::NewProp_NS_BasicSpellBeam_MetaData) };
+#if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ABaseCharacter_Statics::NewProp_bPreparingToJump_MetaData[] = {
 		{ "Category", "Jump" },
 #if !UE_BUILD_SHIPPING
@@ -461,9 +518,12 @@ void EmptyLinkFunctionForGeneratedCodeBaseCharacter() {}
 	}
 	const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_ABaseCharacter_Statics::NewProp_bIsDead = { "bIsDead", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(ABaseCharacter), &Z_Construct_UClass_ABaseCharacter_Statics::NewProp_bIsDead_SetBit, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_ABaseCharacter_Statics::NewProp_bIsDead_MetaData), Z_Construct_UClass_ABaseCharacter_Statics::NewProp_bIsDead_MetaData) };
 	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ABaseCharacter_Statics::PropPointers[] = {
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABaseCharacter_Statics::NewProp_SpellCaster,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABaseCharacter_Statics::NewProp_AbilitySystemComponent,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABaseCharacter_Statics::NewProp_BasicAttributeSet,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABaseCharacter_Statics::NewProp_SpellRange,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABaseCharacter_Statics::NewProp_BasicSpellWidth,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABaseCharacter_Statics::NewProp_NS_BasicSpellBeam,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABaseCharacter_Statics::NewProp_bPreparingToJump,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABaseCharacter_Statics::NewProp_bIsDead,
 	};
@@ -509,9 +569,9 @@ void EmptyLinkFunctionForGeneratedCodeBaseCharacter() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Platformer3D_Source_Platformer3D_Public_Core_Characters_BaseCharacter_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_ABaseCharacter, ABaseCharacter::StaticClass, TEXT("ABaseCharacter"), &Z_Registration_Info_UClass_ABaseCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ABaseCharacter), 1873567899U) },
+		{ Z_Construct_UClass_ABaseCharacter, ABaseCharacter::StaticClass, TEXT("ABaseCharacter"), &Z_Registration_Info_UClass_ABaseCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ABaseCharacter), 3573241481U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Platformer3D_Source_Platformer3D_Public_Core_Characters_BaseCharacter_h_4241257200(TEXT("/Script/Platformer3D"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Platformer3D_Source_Platformer3D_Public_Core_Characters_BaseCharacter_h_981697850(TEXT("/Script/Platformer3D"),
 		Z_CompiledInDeferFile_FID_Platformer3D_Source_Platformer3D_Public_Core_Characters_BaseCharacter_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Platformer3D_Source_Platformer3D_Public_Core_Characters_BaseCharacter_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

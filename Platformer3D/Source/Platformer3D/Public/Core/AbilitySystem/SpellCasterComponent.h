@@ -28,7 +28,13 @@ public:
 //-------------------------------------------------------------------------- Spells
 	// cast a basic attack raytrace
 	UFUNCTION(BlueprintCallable, Category = "Spells")
-	void BasicAttack(float SpellRange, float SpellWidth, FVector StartPoint, FVector EndPoint, class UNiagaraSystem* NSBeam);
+	void BasicAttack(class ABaseCharacter* Instigator, float SpellRange, float SpellWidth, FVector StartPoint, FVector EndPoint, class UNiagaraSystem* NSBeam);
 
 //--------------------------------------------------------------------------
+
+//-------------------------------------------------------------------------- Tags
+public:
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Tags")
+	FGameplayTag DamageTag;
+//-------------------------------------------------------------------------- 
 };

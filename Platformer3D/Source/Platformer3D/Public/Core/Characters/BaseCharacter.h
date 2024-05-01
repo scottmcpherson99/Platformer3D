@@ -30,6 +30,14 @@ public:
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
 
+//----------------------------------------------------------------------------------------------------- Components
+
+	// spell caster component
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Spells", meta = (AllowPrivateAccess = "true"))
+	class USpellCasterComponent* SpellCaster;
+//----------------------------------------------------------------------------------------------------- 
+
+
 //----------------------------------------------------------------------------------------------------- GAS
 	/** Ability System Component. Required to use Gameplay Attributes and Gameplay Abilities. */
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "GAS", meta = (AllowPrivateAccess = "true"))
@@ -72,12 +80,20 @@ public:
 
 //----------------------------------------------------------------------------------------------------- Attack
 	// the basic attack logic
-	UFUNCTION(BlueprintImplementableEvent, BlueprintCallable, Category = "Attack", meta = (DisplayName = "Do Basic Attack"))
-	void BP_DoBasicAttack();
+	UFUNCTION(BlueprintCallable, Category = "Attack")
+	void DoBasicAttack();
 
 	// the spell range
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Attack")
 	float SpellRange = 1000;
+
+	// the spell range
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Attack")
+	float BasicSpellWidth = 50;
+
+	// basic spell beam
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Niagara")
+	class UNiagaraSystem* NS_BasicSpellBeam;
 //-----------------------------------------------------------------------------------------------------
 
 

@@ -20,6 +20,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #define FID_Platformer3D_Source_Platformer3D_Public_Core_Characters_BaseCharacter_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
  \
 	DECLARE_FUNCTION(execStartCharacterDeath); \
+	DECLARE_FUNCTION(execDoBasicAttack); \
 	DECLARE_FUNCTION(execGetMaxMana); \
 	DECLARE_FUNCTION(execGetCurrentMana); \
 	DECLARE_FUNCTION(execGetMaxHealth); \

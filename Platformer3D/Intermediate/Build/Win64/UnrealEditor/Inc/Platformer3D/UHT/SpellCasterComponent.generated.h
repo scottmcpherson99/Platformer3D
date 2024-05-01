@@ -9,6 +9,7 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+class ABaseCharacter;
 class UNiagaraSystem;
 #ifdef PLATFORMER3D_SpellCasterComponent_generated_h
 #error "SpellCasterComponent.generated.h already included, missing '#pragma once' in SpellCasterComponent.h"

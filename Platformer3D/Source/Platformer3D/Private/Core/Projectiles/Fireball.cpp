@@ -19,11 +19,9 @@ AFireball::AFireball()
 
 	// set up the sphere collision
 	SphereCollision = CreateDefaultSubobject<USphereComponent>("SphereCollision");
-	//SphereCollision->SetSphereRadius(FireballRadius);
 
 	// set up the niagara fireball effect
 	NiagaraFireball = CreateDefaultSubobject<UNiagaraComponent>("NiagaraFireball");
-	//NiagaraFireball->SetNiagaraVariableFloat("FireballRadius", FireballRadius);
 	NiagaraFireball->SetupAttachment(SphereCollision);
 
 	// set up the projectile movement for the fireball
@@ -59,25 +57,10 @@ void AFireball::OnOverlapBegin(UPrimitiveComponent* newComp, AActor* OtherActor,
 		// make sure it wasn't us
 		if (HitActor != Instigator)
 		{
-			FGameplayEffectContextHandle Handle;
-			FGameplayEffectSpec Spec;
-			FGameplayEffectSpecHandle SpecHandle;
-
-			//BP_EventHIT(HitActor);
-
-			SpecHandle = HitActor->AbilitySystemComponent->MakeOutgoingSpec(GameplayEffectClass, 1.f, HitActor->AbilitySystemComponent->MakeEffectContext());
+			FGameplayEffectSpecHandle SpecHandle = HitActor->AbilitySystemComponent->MakeOutgoingSpec(GameplayEffectClass, 1.f, HitActor->AbilitySystemComponent->MakeEffectContext());
 			UAbilitySystemBlueprintLibrary::AssignTagSetByCallerMagnitude(SpecHandle, DamageTag, DamageValue);
-
 			// apply the gameplay aeffect to the hit actor
 			HitActor->AbilitySystemComponent->BP_ApplyGameplayEffectSpecToSelf(SpecHandle);
-			//HitActor->AbilitySystemComponent->ApplyGameplayEffectSpecToSelf(Spec);
-		/*	DamageEffect = NewObject<UGameplayEffect>(GameplayEffectClass);//Cast<UGameplayEffect>(GameplayEffectClass);
-			if (DamageEffect != nullptr)
-			{
-				GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Yellow, TEXT("We got a collision.")); 
-				HitActor->GetAbilitySystemComponent()->ApplyGameplayEffectToSelf(DamageEffect, 1.f, Handle);
-				
-			}*/
 		}
 	}
 }

@@ -96,6 +96,12 @@
     <ClCompile Include="..\..\Source\Platformer3D\Private\Core\Characters\Enemy\BasicEnemy\BTTask_Wander.cpp">
       <Filter>Source\Platformer3D\Private\Core\Characters\Enemy\BasicEnemy</Filter>
     </ClCompile>
+    <Filter Include="Source\Platformer3D\Private\Core\Characters\Enemy\BasicEnemy\BTTasks">
+      <UniqueIdentifier>{F47363BD-D2EF-37FF-A3EF-C4435EF0E1D5}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Platformer3D\Private\Core\Characters\Enemy\BasicEnemy\BTTasks\BTTask_BasicAttack.cpp">
+      <Filter>Source\Platformer3D\Private\Core\Characters\Enemy\BasicEnemy\BTTasks</Filter>
+    </ClCompile>
     <Filter Include="Source\Platformer3D\Private\Core\Characters\Enemy\BasicEnemy\Services">
       <UniqueIdentifier>{4AC693E9-BAB4-3507-BBC1-22D85B279165}</UniqueIdentifier>
     </Filter>
@@ -203,6 +209,12 @@
     </ClInclude>
     <ClInclude Include="..\..\Source\Platformer3D\Public\Core\Characters\Enemy\BasicEnemy\BTTask_Wander.h">
       <Filter>Source\Platformer3D\Public\Core\Characters\Enemy\BasicEnemy</Filter>
+    </ClInclude>
+    <Filter Include="Source\Platformer3D\Public\Core\Characters\Enemy\BasicEnemy\BTTasks">
+      <UniqueIdentifier>{517FE70D-850A-3EEF-8121-D7A6382A4A6F}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\Platformer3D\Public\Core\Characters\Enemy\BasicEnemy\BTTasks\BTTask_BasicAttack.h">
+      <Filter>Source\Platformer3D\Public\Core\Characters\Enemy\BasicEnemy\BTTasks</Filter>
     </ClInclude>
     <Filter Include="Source\Platformer3D\Public\Core\Characters\Enemy\BasicEnemy\Services">
       <UniqueIdentifier>{9BD60FB4-75C1-3785-8847-1242AE6E9AA2}</UniqueIdentifier>

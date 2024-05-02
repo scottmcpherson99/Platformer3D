@@ -17,7 +17,7 @@ class PLATFORMER3D_API UBTService_UpdateMovementSpeed : public UBTService
 public:
 	UBTService_UpdateMovementSpeed();
 
-	virtual void TickNode(UBehaviorTreeComponent& OwnerComp, uint8* NodeMemory, float DeltaSeconds);
+	virtual void OnBecomeRelevant(UBehaviorTreeComponent& OwnerComp, uint8* NodeMemory) override;
 
 	//-------------------------------------------------------------------------- Attributes
 		// check if we should focus

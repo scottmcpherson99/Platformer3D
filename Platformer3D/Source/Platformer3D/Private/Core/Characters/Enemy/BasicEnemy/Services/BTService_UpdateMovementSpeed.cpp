@@ -10,9 +10,10 @@
 UBTService_UpdateMovementSpeed::UBTService_UpdateMovementSpeed()
 {
 	NodeName = "Update Movement Speed";
+	bNotifyBecomeRelevant = true;
 }
 
-void UBTService_UpdateMovementSpeed::TickNode(UBehaviorTreeComponent& OwnerComp, uint8* NodeMemory, float DeltaSeconds)
+void UBTService_UpdateMovementSpeed::OnBecomeRelevant(UBehaviorTreeComponent& OwnerComp, uint8* NodeMemory)
 {
 	if (AAIController* EnemyController = Cast<AAIController>(OwnerComp.GetAIOwner()))
 	{

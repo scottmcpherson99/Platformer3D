@@ -17,8 +17,7 @@ class PLATFORMER3D_API UBTService_SetFocusOnTarget : public UBTService
 public:
 	UBTService_SetFocusOnTarget();
 
-	virtual void TickNode(UBehaviorTreeComponent& OwnerComp, uint8* NodeMemory, float DeltaSeconds);
-
+	virtual void OnBecomeRelevant(UBehaviorTreeComponent& OwnerComp, uint8* NodeMemory) override;
 //-------------------------------------------------------------------------- Attributes
 	// check if we should focus
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Attributes")

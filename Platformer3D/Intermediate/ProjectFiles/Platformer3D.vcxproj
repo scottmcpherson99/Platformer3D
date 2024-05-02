@@ -167,6 +167,11 @@
       <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles)</ForcedIncludeFiles>
       <AdditionalOptions>$(ClCompile_AdditionalOptions)</AdditionalOptions>
     </ClCompile>
+    <ClCompile Include="..\..\Source\Platformer3D\Private\Core\Characters\Enemy\BasicEnemy\BTTasks\BTTask_BasicAttack.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles)</ForcedIncludeFiles>
+      <AdditionalOptions>$(ClCompile_AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
     <ClCompile Include="..\..\Source\Platformer3D\Private\Core\Characters\Enemy\BasicEnemy\Services\BTService_UpdateMovementSpeed.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles)</ForcedIncludeFiles>
@@ -231,6 +236,7 @@
     <ClInclude Include="..\..\Source\Platformer3D\Public\Core\Characters\Enemy\BasicEnemy\BasicEnemy.h"/>
     <ClInclude Include="..\..\Source\Platformer3D\Public\Core\Characters\Enemy\BasicEnemy\BTService_SetFocusOnTarget.h"/>
     <ClInclude Include="..\..\Source\Platformer3D\Public\Core\Characters\Enemy\BasicEnemy\BTTask_Wander.h"/>
+    <ClInclude Include="..\..\Source\Platformer3D\Public\Core\Characters\Enemy\BasicEnemy\BTTasks\BTTask_BasicAttack.h"/>
     <ClInclude Include="..\..\Source\Platformer3D\Public\Core\Characters\Enemy\BasicEnemy\Services\BTService_UpdateMovementSpeed.h"/>
     <ClInclude Include="..\..\Source\Platformer3D\Public\Core\Characters\Player\HUD_Player.h"/>
     <ClInclude Include="..\..\Source\Platformer3D\Public\Core\Characters\Player\PC_Player.h"/>

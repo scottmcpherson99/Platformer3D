@@ -9,9 +9,10 @@
 UBTService_SetFocusOnTarget::UBTService_SetFocusOnTarget()
 {
 	NodeName = "Set Focus on Target";
+	bNotifyBecomeRelevant = true;
 }
 
-void UBTService_SetFocusOnTarget::TickNode(UBehaviorTreeComponent& OwnerComp, uint8* NodeMemory, float DeltaSeconds)
+void UBTService_SetFocusOnTarget::OnBecomeRelevant(UBehaviorTreeComponent& OwnerComp, uint8* NodeMemory)
 {
 	if (AAIController* EnemyController = Cast<AAIController>(OwnerComp.GetAIOwner()))
 	{
@@ -23,14 +24,14 @@ void UBTService_SetFocusOnTarget::TickNode(UBehaviorTreeComponent& OwnerComp, ui
 				// set focus on target actor
 				if (AActor* ActorToFocus = Cast<AActor>(OwnerComp.GetBlackboardComponent()->GetValueAsObject(FocusedActor.SelectedKeyName)))
 				{
-					EnemyController->SetFocus(ActorToFocus, EAIFocusPriority::Move);
+					EnemyController->SetFocus(ActorToFocus, EAIFocusPriority::Default);
 				}
 			}
 			else
 			{
 				// clear focus
-				EnemyController->ClearFocus(EAIFocusPriority::Move);
+				EnemyController->ClearFocus(EAIFocusPriority::Default);
 			}
 		}
-	}	
+	}
 }

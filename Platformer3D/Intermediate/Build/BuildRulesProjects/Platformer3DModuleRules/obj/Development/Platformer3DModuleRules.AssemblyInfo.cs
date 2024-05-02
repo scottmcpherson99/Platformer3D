@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Platformer3DModuleRules")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Development")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2f921dd4a34bd96096259efaea7310c4e2193360")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7f3631f275af34f88fe6c2771140f70f61cde5ad")]
 [assembly: System.Reflection.AssemblyProductAttribute("Platformer3DModuleRules")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Platformer3DModuleRules")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -26,6 +26,13 @@ void EmptyLinkFunctionForGeneratedCodeBaseCharacter() {}
 		P_THIS->StartCharacterDeath();
 		P_NATIVE_END;
 	}
+	DEFINE_FUNCTION(ABaseCharacter::execDoFireballAttack)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->DoFireballAttack();
+		P_NATIVE_END;
+	}
 	DEFINE_FUNCTION(ABaseCharacter::execDoBasicAttack)
 	{
 		P_FINISH;
@@ -71,6 +78,7 @@ void EmptyLinkFunctionForGeneratedCodeBaseCharacter() {}
 		UClass* Class = ABaseCharacter::StaticClass();
 		static const FNameNativePtrPair Funcs[] = {
 			{ "DoBasicAttack", &ABaseCharacter::execDoBasicAttack },
+			{ "DoFireballAttack", &ABaseCharacter::execDoFireballAttack },
 			{ "GetCurrentHealth", &ABaseCharacter::execGetCurrentHealth },
 			{ "GetCurrentMana", &ABaseCharacter::execGetCurrentMana },
 			{ "GetMaxHealth", &ABaseCharacter::execGetMaxHealth },
@@ -135,6 +143,35 @@ void EmptyLinkFunctionForGeneratedCodeBaseCharacter() {}
 		if (!ReturnFunction)
 		{
 			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_ABaseCharacter_DoBasicAttack_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_ABaseCharacter_DoFireballAttack_Statics
+	{
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UECodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ABaseCharacter_DoFireballAttack_Statics::Function_MetaDataParams[] = {
+		{ "Category", "Attack" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// cast a fireball\n" },
+#endif
+		{ "ModuleRelativePath", "Public/Core/Characters/BaseCharacter.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "cast a fireball" },
+#endif
+	};
+#endif
+	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ABaseCharacter_DoFireballAttack_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ABaseCharacter, nullptr, "DoFireballAttack", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ABaseCharacter_DoFireballAttack_Statics::Function_MetaDataParams), Z_Construct_UFunction_ABaseCharacter_DoFireballAttack_Statics::Function_MetaDataParams) };
+	UFunction* Z_Construct_UFunction_ABaseCharacter_DoFireballAttack()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_ABaseCharacter_DoFireballAttack_Statics::FuncParams);
 		}
 		return ReturnFunction;
 	}
@@ -390,6 +427,7 @@ void EmptyLinkFunctionForGeneratedCodeBaseCharacter() {}
 	const FClassFunctionLinkInfo Z_Construct_UClass_ABaseCharacter_Statics::FuncInfo[] = {
 		{ &Z_Construct_UFunction_ABaseCharacter_BP_EventDeath, "BP_EventDeath" }, // 4271029173
 		{ &Z_Construct_UFunction_ABaseCharacter_DoBasicAttack, "DoBasicAttack" }, // 2116396314
+		{ &Z_Construct_UFunction_ABaseCharacter_DoFireballAttack, "DoFireballAttack" }, // 3735964231
 		{ &Z_Construct_UFunction_ABaseCharacter_GetCurrentHealth, "GetCurrentHealth" }, // 1356328081
 		{ &Z_Construct_UFunction_ABaseCharacter_GetCurrentMana, "GetCurrentMana" }, // 2576175798
 		{ &Z_Construct_UFunction_ABaseCharacter_GetMaxHealth, "GetMaxHealth" }, // 1080572027
@@ -569,9 +607,9 @@ void EmptyLinkFunctionForGeneratedCodeBaseCharacter() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Platformer3D_Source_Platformer3D_Public_Core_Characters_BaseCharacter_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_ABaseCharacter, ABaseCharacter::StaticClass, TEXT("ABaseCharacter"), &Z_Registration_Info_UClass_ABaseCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ABaseCharacter), 3573241481U) },
+		{ Z_Construct_UClass_ABaseCharacter, ABaseCharacter::StaticClass, TEXT("ABaseCharacter"), &Z_Registration_Info_UClass_ABaseCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ABaseCharacter), 4108123100U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Platformer3D_Source_Platformer3D_Public_Core_Characters_BaseCharacter_h_981697850(TEXT("/Script/Platformer3D"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Platformer3D_Source_Platformer3D_Public_Core_Characters_BaseCharacter_h_4005235082(TEXT("/Script/Platformer3D"),
 		Z_CompiledInDeferFile_FID_Platformer3D_Source_Platformer3D_Public_Core_Characters_BaseCharacter_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Platformer3D_Source_Platformer3D_Public_Core_Characters_BaseCharacter_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

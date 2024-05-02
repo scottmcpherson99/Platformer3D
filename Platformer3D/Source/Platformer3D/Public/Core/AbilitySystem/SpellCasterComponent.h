@@ -30,8 +30,14 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "Spells")
 	void BasicAttack(class ABaseCharacter* Instigator, float SpellRange, float SpellWidth, FVector StartPoint, FVector EndPoint, class UNiagaraSystem* NSBeam);
 
+	UFUNCTION(BlueprintCallable, Category = "Spells")
+	void CastFireball(class ABaseCharacter* Instigator, FVector StartPoint, FRotator ActorRotation);
 //--------------------------------------------------------------------------
 
+//-------------------------------------------------------------------------- Spawning
+	// create a reference to the fireball we want to spawm
+	UPROPERTY(EditDefaultsOnly, Category = "Widgets")
+	TSubclassOf<class AFireball> FireballClass;
 //-------------------------------------------------------------------------- Tags
 public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Tags")

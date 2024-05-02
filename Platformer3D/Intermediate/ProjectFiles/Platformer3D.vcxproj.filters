@@ -135,6 +135,12 @@
     <ClCompile Include="..\..\Source\Platformer3D\Private\Core\GameSettings\GM_GameLevel.cpp">
       <Filter>Source\Platformer3D\Private\Core\GameSettings</Filter>
     </ClCompile>
+    <Filter Include="Source\Platformer3D\Private\Core\Projectiles">
+      <UniqueIdentifier>{C144D9AC-8C69-3678-9C96-435CFFE9A540}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Platformer3D\Private\Core\Projectiles\Fireball.cpp">
+      <Filter>Source\Platformer3D\Private\Core\Projectiles</Filter>
+    </ClCompile>
     <Filter Include="Source\Platformer3D\Private\UI">
       <UniqueIdentifier>{18EF1B7D-BC0F-3FA6-9CEB-6ADD8DADECDB}</UniqueIdentifier>
     </Filter>
@@ -248,6 +254,12 @@
     </ClInclude>
     <ClInclude Include="..\..\Source\Platformer3D\Public\Core\GameSettings\GM_GameLevel.h">
       <Filter>Source\Platformer3D\Public\Core\GameSettings</Filter>
+    </ClInclude>
+    <Filter Include="Source\Platformer3D\Public\Core\Projectiles">
+      <UniqueIdentifier>{DB5D374F-F2A0-309D-826B-130E7E1636B1}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\Platformer3D\Public\Core\Projectiles\Fireball.h">
+      <Filter>Source\Platformer3D\Public\Core\Projectiles</Filter>
     </ClInclude>
     <Filter Include="Source\Platformer3D\Public\UI">
       <UniqueIdentifier>{6D660575-93AE-31B8-9AB6-2284CE3AD492}</UniqueIdentifier>

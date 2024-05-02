@@ -11,6 +11,7 @@
 #include "Abilities/GameplayAbility.h"
 #include "AbilitySystemComponent.h"
 #include "AbilitySystemBlueprintLibrary.h"
+#include "Core/Projectiles/Fireball.h"
 
 // Sets default values for this component's properties
 USpellCasterComponent::USpellCasterComponent()
@@ -99,6 +100,25 @@ void USpellCasterComponent::BasicAttack(ABaseCharacter* Instigator, float SpellR
 				}
 			}
 		}
+	}
+}
+
+void USpellCasterComponent::CastFireball(ABaseCharacter* Instigator, FVector StartPoint, FRotator ActorRotation)
+{
+	// spawn the chosen fireball in the direction the character was facing
+	if (FireballClass != nullptr)
+	{
+		//GetWorld()->SpawnActor<AFireball>(FireballClass, StartPoint, ActorRotation);
+		const FTransform FireballTransform(ActorRotation, StartPoint, FVector(1.0, 1.0, 1.0));
+		
+		if (AFireball* SpawnedFireball = GetWorld()->SpawnActorDeferred<AFireball>(FireballClass, FireballTransform))
+		{
+			// set the default values
+			SpawnedFireball->Instigator = Instigator;
+
+			// finish spawning direball
+			SpawnedFireball->FinishSpawning(FireballTransform);
+		}		
 	}
 }
 

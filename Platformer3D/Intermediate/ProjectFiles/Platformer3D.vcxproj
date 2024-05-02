@@ -207,6 +207,11 @@
       <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles)</ForcedIncludeFiles>
       <AdditionalOptions>$(ClCompile_AdditionalOptions)</AdditionalOptions>
     </ClCompile>
+    <ClCompile Include="..\..\Source\Platformer3D\Private\Core\Projectiles\Fireball.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles)</ForcedIncludeFiles>
+      <AdditionalOptions>$(ClCompile_AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
     <ClCompile Include="..\..\Source\Platformer3D\Private\UI\InGame\AbilitySlot.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <ForcedIncludeFiles>$(ClCompile_ForcedIncludeFiles)</ForcedIncludeFiles>
@@ -244,6 +249,7 @@
     <ClInclude Include="..\..\Source\Platformer3D\Public\Core\Collectables\CollectableBase.h"/>
     <ClInclude Include="..\..\Source\Platformer3D\Public\Core\GameSettings\GI_Platformer.h"/>
     <ClInclude Include="..\..\Source\Platformer3D\Public\Core\GameSettings\GM_GameLevel.h"/>
+    <ClInclude Include="..\..\Source\Platformer3D\Public\Core\Projectiles\Fireball.h"/>
     <ClInclude Include="..\..\Source\Platformer3D\Public\UI\InGame\AbilitySlot.h"/>
     <ClInclude Include="..\..\Source\Platformer3D\Public\UI\InGame\InGameHUD.h"/>
     <ClInclude Include="..\..\Source\Platformer3D\Public\UI\InGame\InGameSliderStat.h"/>

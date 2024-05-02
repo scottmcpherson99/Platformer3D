@@ -107,6 +107,18 @@ void ABaseCharacter::DoBasicAttack()
 	SpellCaster->BasicAttack(this, SpellRange, BasicSpellWidth, SocketLocation, SpellEndLocation, NS_BasicSpellBeam);
 }
 
+void ABaseCharacter::DoFireballAttack()
+{
+	// get the socket location for spell start
+	FVector SocketLocation = GetMesh()->GetSocketLocation("RightHand");
+
+	// get the forward direction for the fireball
+	FVector ForwardDirection = GetMesh()->GetForwardVector();
+
+	// cast the fireball
+	SpellCaster->CastFireball(this, SocketLocation, GetActorRotation());
+}
+
 void ABaseCharacter::StartCharacterDeath()
 {
 	bIsDead = true;

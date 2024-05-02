@@ -21,6 +21,7 @@ class UNiagaraSystem;
 #define FID_Platformer3D_Source_Platformer3D_Public_Core_AbilitySystem_SpellCasterComponent_h_13_EDITOR_ONLY_SPARSE_DATA_PROPERTY_ACCESSORS
 #define FID_Platformer3D_Source_Platformer3D_Public_Core_AbilitySystem_SpellCasterComponent_h_13_RPC_WRAPPERS_NO_PURE_DECLS \
  \
+	DECLARE_FUNCTION(execCastFireball); \
 	DECLARE_FUNCTION(execBasicAttack);
 
 

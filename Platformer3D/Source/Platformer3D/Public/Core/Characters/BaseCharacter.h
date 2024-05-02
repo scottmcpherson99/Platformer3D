@@ -94,6 +94,10 @@ public:
 	// basic spell beam
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Niagara")
 	class UNiagaraSystem* NS_BasicSpellBeam;
+
+	// cast a fireball
+	UFUNCTION(BlueprintCallable, Category = "Attack")
+	void DoFireballAttack();
 //-----------------------------------------------------------------------------------------------------
 
 
